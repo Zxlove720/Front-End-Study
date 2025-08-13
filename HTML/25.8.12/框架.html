@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <iframe>标签原始使用，可以将资源（视频、图片、文件、其他网页）嵌入到当前网页中 -->
+    <!-- <iframe src="https://www.bilibili.com" frameborder="1" width="900px" height="300px"></iframe> -->
+    
+    <!-- <iframe>标签可以配合超链接中的target属性使用，将连接的内容嵌入到当前网页 -->
+    <a href="https://www.bilibili.com" target="container">去b站</a>
+    <br>
+
+    <!-- <iframe>标签可以配合form表单中的target属性使用，将提交表单后的响应页面嵌入到当前网页 -->
+    <form action="https://search.jd.com" target="container">
+        <input type="text" name="keyword">
+        <input type="submit" value="搜索">
+    </form>
+    <iframe name="container" frameborder="0" width="2000px" height="1000px></iframe>
+
+
+</body>
+</html>

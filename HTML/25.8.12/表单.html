@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+
+<body>
+    <h1>注册会员</h1>
+    <form action="https://search.jd.com" method="get" target="_blank">
+        <fieldset>
+            <legend>必须信息</legend>
+            <!-- 用户名 -->
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" minlength="4" maxlength="16" required>
+            <br>
+            <!-- 密码 -->
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" minlength="6" max="32" required>
+            <br>
+            <!-- 性别 -->
+            <span>性别</span>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">女</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>附加信息</legend>
+            <!-- 爱好 -->
+            <span>爱好</span>
+            <input type="checkbox" id="java" name="hobby" value="java">
+            <label for="java">java</label>
+            <input type="checkbox" id="C" name="hobby" value="C">
+            <label for="C">C</label>
+            <input type="checkbox" id="python" name="hobby" value="python">
+            <label for="python">python</label>
+            <br>
+            <!-- 文本域 -->
+            <label for="other">其他</label>
+            <textarea name="other" id="other" rows="5" cols="20"></textarea>
+            <br>
+            <!-- 地区选择 -->
+            <select name="address" id="address">
+                <option value="cq">重庆</option>
+                <option value="sc">四川</option>
+                <option value="bj">北京</option>
+                <option value="sh">上海</option>
+                <option value="sz">深圳</option>
+            </select>
+        </fieldset>
+
+        <br>
+        <!-- 隐藏域 -->
+        <input type="hidden" name="from" value="262460">
+        <fieldset>
+            <legend>提交</legend>
+            <!-- 提交和重置 -->
+            <input type="submit" value="注册">
+            <button type="reset">重置</button>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
