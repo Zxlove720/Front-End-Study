@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本选择器</title>
+    <style>
+        /* 通配选择器，选择所有元素 */
+        * {
+            color: red;
+        }
+        /* 元素选择器，选择某一类元素，控制所有的该类元素 */
+        h1 {
+            color: blue;
+        }
+        p {
+            color: green;
+        }
+        /* 类选择器，选择同一个类别的元素 */
+        .self {
+            color: black;
+            font-size: 35px;
+        }
+        /* id选择器，因为id不能重复，每一个元素都有自己唯一的id，所以说id选择器是选择某一个元素 */
+        #blue-moon {
+            color: aqua;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>震惊</h1>
+    <p>你好啊</p>
+    <p class="self">我是渣渣灰</p>
+    <p class="self" id="blue-moon">我在贪玩蓝月等你</p>
+    <p>点一下玩一年，装备不要一分钱</p>
+    <p id="blue-moon">就是要贪玩蓝月</p>
+</body>
+</html>
