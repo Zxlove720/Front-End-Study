@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>超链接复习</title>
+</head>
+
+<body>
+    <!-- 超链接主要作用是从当前页面跳转 -->
+    <!-- 可以实现跳转到指定页面、跳转到指定文件（可触发下载）、跳转到当前页面的锚点位置、唤起指定应用（如邮箱等） -->
+    
+    <!-- 跳转到页面 -->
+    <a href="https://www.baidu.com" target="_blank" id="baidu">超链接</a>
+    <br>
+
+    <!-- 跳转到文件 -->
+    <a href="../25.8.10/image/玫瑰.jpg" target="_blank">rose</a>
+    <br>
+
+    <!-- 浏览器无法打开的文件就会自动触发下载，也可以通过download属性自动触发下载，download的值就是文件名 -->
+    <a href="../25.8.10/image/玫瑰.jpg" target="_self" download="rose">roseDownload</a>
+    <br>
+
+    <!-- 跳转锚点 -->
+        <!-- 设置锚点 -->
+        <!-- a标签配合name属性使用就可以作为锚点，href属性的a标签是超链接，name属性的a标签是锚点 -->
+    <a name="test1">test1位置</a>
+        <!-- 其他标签配合id属性可以作为锚点 -->
+    <h2 id="test2">test2位置</h2>
+
+    <a href="#rose1">去rose1</a>
+    <a href="#rose2">去rose2</a>
+    <a href="#rose3">去rose3</a>
+    <a href="#rose4">去rose4</a>
+    <a href="#rose5">去rose5</a>
+    <a href="#rose6">去rose6</a>
+    <br>
+
+    <img src="../25.8.10/image/玫瑰.jpg" alt="rose" id="rose1" width="200px">
+    <img src="../25.8.10/image/玫瑰.jpg" alt="rose" id="rose2" width="200px">
+    <img src="../25.8.10/image/玫瑰.jpg" alt="rose" id="rose3" width="200px">
+    <img src="../25.8.10/image/玫瑰.jpg" alt="rose" id="rose4" width="200px">
+    <img src="../25.8.10/image/玫瑰.jpg" alt="rose" id="rose5" width="200px">
+    <br>
+    <a name="rose6">test1位置</a>
+    <br>
+    <a href="#">回到顶部</a>
+    <br>
+    <a href="">刷新</a>
+
+
+
+</body>
+
+</html>
