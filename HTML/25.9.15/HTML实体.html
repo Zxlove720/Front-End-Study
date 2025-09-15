@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>HTML实体</title>
+</head>
+
+<body>
+    <!-- 在HTML中可以使用特殊的形式用于表示某个符号，这种特殊形式就是HTML实体，小写的<是定义HTML标签的开始，但是想要在浏览器中显示类似字符，就需要使用字符实体 -->
+    <!-- 字符实体由三部分组成：& + 实体名称 + ; -->
+    <p>
+        在HTML中直接输入空格，无论输入多少个，都只会显示一个，&amp;nbsp;字符实体代表空格，此时可以通过多个&amp;nbsp;达到多个空格的效果
+        这就是多个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;空格的效果。
+    </p>
+    <p>
+        同理，由于大于号和小于号和标签的开始结束相互冲突，想要显示出&lt;和&gt;需要使用&amp;lt;和&amp;gt;字符实体来替代
+    </p>
+    <p>
+        &可以正常输出到屏幕上，但是想看&的字符实体则需要使用&amp;amp;amp;相当于使用&amp;amp;去代替&
+    </p>
+    <p>
+        &amp;yen是货币单位&yen;，&amp;copy是版权样式&copy;，&amp;times是&times;，&amp;divide是&divide;
+    </p>
+</body>
+
+</html>
