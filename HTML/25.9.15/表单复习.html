@@ -9,6 +9,65 @@
 
 
 <body>
+    <!-- 表单是一个包含交互的区域，用于收集用户提供的数据 -->
+    <!-- action是指定表单的提交地址，target是表单提交后如何打开页面，method是表单提交的方式 -->
+    <form action="#" target="_blank" method="post">
+        请输入文本：<input type="text" name="text">
+        <br>
+        <button type="button">按钮</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h2>信息表</h2>
+    <form action="#" target="_self" method="post">
+        <!-- 文本输入框 -->
+        <input type="text" name="text" value="请输入文本" maxlength="256">
+        <br>
+        <!-- 密码输入框，密码框内容无法复制 -->
+        <input type="password" name="password" value="请输入密码" maxlength="64">
+        <br>
+        <!-- 单选框 -->
+        <!-- 想要实现单选的效果，多个radio的name属性值必须保持一致，value属性是表单提交的值，name-value可以类比key-value -->
+        <input type="radio" name="gender" value="male" checked>男
+        <input type="radio" name="gender" value="female">女
+        <br>
+        <!-- 复选框 -->
+        <!-- 和单选框一样，多个复选框的name属性也需要保持一致，value属性是表单提交的值 -->
+        <input type="checkbox" name="hobby" value="smoke">抽烟
+        <input type="checkbox" name="hobby" value="drink">喝酒
+        <input type="checkbox" name="hobby" value="perm" checked>烫头
+        <br>
+        <!-- 隐藏域 -->
+        <!-- 隐藏域是用户不可见的输入区域，可以在提交表单的时候，携带固定的数据，可以避免请求攻击 -->
+        <!-- 当表单提交到服务器时，必须判断tag属性是否为100，否则视为无效请求 -->
+        <input type="hidden" name="tag" value="100">
+        <!-- 提交 -->
+        <!-- 可以通过input指定submit属性或者button（默认type是submit）提交表单 -->
+        <!-- 通过input标签实现的按钮，使用value属性指定按钮文字 -->
+        <input type="submit" value="提交表单">
+        <button type="submit">提交表单</button>
+        <br>
+        <br>
+        <!-- 普通按钮 -->
+        <!-- 由于button的默认type是submit，想要普通按钮，需要指定其type为button -->
+        <input type="button" value="普通按钮">
+        <button type="button">普通按钮</button>
+        <br>
+        <br>
+        <!-- 文本域 -->
+        <textarea name="msg" rows="5" cols="20">请输入文本</textarea>
+        <!-- 下拉框 -->
+        <!-- name属性指定数据的名称name-value，value属性是option代表的值，提交到服务器的值也是value，如果没有value，则会提交option中间的文字 -->
+        <select name="from">
+            <option value="chongqing" selected>重庆</option>
+            <option value="sichuan" disabled>四川</option>
+            <option value="guangdong">广东</option>
+        </select>
+        <!-- 给表单控件标签设置disabled可以禁用该表单控件 -->
+    </form>
     
 </body>
 
