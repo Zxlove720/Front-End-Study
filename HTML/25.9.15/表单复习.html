@@ -73,35 +73,39 @@
     <h2>信息表</h2>
     <!-- label可以和表单控件关联，关联后点击文字，对应的表单控件就可以获取焦点 -->
     <form action="#" target="_blank" method="get">
-        <label>用户名
-            <input type="text" value="请输入用户名" maxlength="16">
-        </label>
-        <br>
-        <label for="password">密码</label>
-        <input type="password" id="password" maxlength="32">
-        <br>
-        <label for="male">男</label>
-        <input type="radio" id="male" name="gender" value="male" checked>
-        <label for="female">女</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <br>
-        <label for="somke">抽烟</label>
-        <input type="checkbox" id="smoke" name="hobby" value="smoke">
-        <label for="drink">喝酒</label>
-        <input type="checkbox" id="drink" name="hobby" value="drink">
-        <label for="perm">烫头</label>
-        <input type="checkbox" id="perm" name="hobby" value="perm" checked>
-        <br>
-        <input type="hidden" name="tag" value="100">
-        <br>
-        <label for="address">地区</label>
-        <select name="address" id="address">
-            <option value="chongqing">重庆</option>
-            <option value="sichuan">四川</option>
-            <option value="beijing">北京</option>
-            <option value="shanghai">上海</option>
-            <option value="guangdong">广东</option>
-        </select>
+        <!-- fieldset可以为表单控件分组，legend是分组标签的标题 -->
+        <fieldset>
+            <legend>主要信息</legend>
+            <label>用户名
+                <input type="text" value="请输入用户名" maxlength="16">
+            </label>
+            <br>
+            <label for="password">密码</label>
+            <input type="password" id="password" maxlength="32">
+            <br>
+            <label for="male">男</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="female">女</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <br>
+            <label for="somke">抽烟</label>
+            <input type="checkbox" id="smoke" name="hobby" value="smoke">
+            <label for="drink">喝酒</label>
+            <input type="checkbox" id="drink" name="hobby" value="drink">
+            <label for="perm">烫头</label>
+            <input type="checkbox" id="perm" name="hobby" value="perm" checked>
+            <br>
+            <input type="hidden" name="tag" value="100">
+            <br>
+            <label for="address">地区</label>
+            <select name="address" id="address">
+                <option value="chongqing">重庆</option>
+                <option value="sichuan">四川</option>
+                <option value="beijing">北京</option>
+                <option value="shanghai">上海</option>
+                <option value="guangdong">广东</option>
+            </select>
+        </fieldset>
         <br>
         <label for="text">写点什么</label>
         <br>
