@@ -41,6 +41,16 @@
         li + p {
             color: orange;
         }
+        div[title] {
+            background-color: skyblue;
+            width: 500px;
+            height: 200px;
+        }
+        div[title="456"] {
+            background-color: rebeccapurple;
+            width: 500px;
+            height: 200px;
+        }
     </style>
     <link rel="stylesheet" href="../../css/25.9.16/CSS选择器.css">
 
@@ -96,6 +106,9 @@
             <li>son</li>
         </ul>
     </div>
+    <div title="456"></div>
+    <br>
+    <div title="123"></div>
 </body>
 
 </html>
