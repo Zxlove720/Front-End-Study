@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        a:link {
+            color: black;
+            font-size: 20px;
+        }
+        a:visited {
+            color: green;
+            font-size: 20px;
+        }
+        a:hover {
+            color: red;
+            font-size: 25px;
+        }
+        a:active {
+            color: purple;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 伪类选择器，是一种类似类选择器的选择器，是元素的特殊状态。 -->
+    <!-- 动态伪类 -->
+    <!-- :link，只有超链接可以使用，表示未被访问状态 -->
+    <!-- :visited，只有超链接可以使用，表示访问过的状态 -->
+    <!-- :hover，鼠标悬停在元素上的状态 -->
+    <!-- :active，元素激活的状态。激活是指鼠标按住该元素不松开 -->
+    <!-- :focus，该元素获取焦点，只有表单类元素才可以使用 -->
+    <!-- 动态伪类的使用顺序必须是link-visited-hover-active-focus
+    这是因为动态伪类本质上是通过CSS的层叠性实现的，一个元素可能存在多个相同的样式，但只能存在一个状态，
+    如果顺序不对，会出现样式覆盖的问题 -->
+    <a href="https://www.baidu.com">百度一下</a>
+    
+
+
+</body>
+</html>
