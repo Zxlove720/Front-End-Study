@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>伪类选择器</title>
-    <style>
+    <!-- <style>
         a:link {
             color: black;
             font-size: 20px;
@@ -21,10 +21,25 @@
             color: purple;
             font-size: 25px;
         }
+    </style> -->
+    <style>
+        li:first-child {
+            color: red;
+        }
+        li:last-child {
+            color: green;
+        }
+        li:nth-child(3) {
+            color: orange;
+        }
+        li:first-of-type {
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <!-- 伪类选择器，是一种类似类选择器的选择器，是元素的特殊状态。 -->
+    <div>
+        <!-- 伪类选择器，是一种类似类选择器的选择器，是元素的特殊状态。 -->
     <!-- 动态伪类 -->
     <!-- :link，只有超链接可以使用，表示未被访问状态 -->
     <!-- :visited，只有超链接可以使用，表示访问过的状态 -->
@@ -35,7 +50,21 @@
     这是因为动态伪类本质上是通过CSS的层叠性实现的，一个元素可能存在多个相同的样式，但只能存在一个状态，
     如果顺序不对，会出现样式覆盖的问题 -->
     <a href="https://www.baidu.com">百度一下</a>
+    </div>
     
+    <br>
+
+    <div>
+        <h2>成绩排名</h2>
+        <ol>
+            <span></span>
+            <li>张三</li>
+            <li>李四</li>
+            <li>王五</li>
+            <li>赵六</li>
+            <li>钱七</li>
+        </ol>
+    </div>
 
 
 </body>
