@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>CSS选择器</title>
     <style>
-        h1.important {
+        /* h1.important {
             color: green;
             font-size: 100px;
         }
@@ -19,6 +19,27 @@
         }
         h2#unimportant{
             color: antiquewhite;
+        } */
+        h2,
+        .important{
+            color: red;
+            font-size: 20px;
+        }
+        /* 后代选择器，div的所有后代li */
+        div li{
+            color: green;
+        }
+        /* 子代选择器，div的子代li，必须是子代 */
+        div>li{
+            color: red;
+        }
+        /* 兄弟选择器，li的直接兄弟p */
+        li ~ p {
+            color: skyblue;
+        }
+        /* 兄弟选择器，li的所有兄弟p */
+        li + p {
+            color: orange;
         }
     </style>
     <link rel="stylesheet" href="../../css/25.9.16/CSS选择器.css">
@@ -30,7 +51,51 @@
     <h1 id="unimportant">看看复合选择器</h1>
     <h2 class="important">看看复合选择器</h2>
     <h2 id="unimportant">看看复合选择器</h2>
-
+    <h1>看看并集选择器</h1>
+    <br>
+    <br>
+    <br>
+    <h1>后代选择器</h1>
+    <div class="fatherfather">
+        <ul class="father">
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1>子代选择器</h1>
+    <!-- 子代只能是直接包裹于某元素的元素，只能是第一代；后代是只要是包裹于某元素的元素，无论多少代 -->
+    <div>
+        <li>son</li>
+        <ul>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1>兄弟选择器</h1>
+    <div>
+        <ul>
+            <li>son</li>
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+            <li>son</li>
+        </ul>
+    </div>
 </body>
 
 </html>
