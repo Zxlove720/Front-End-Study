@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>字体相关复习</title>
+    <style>
+        div {
+            background-color: orange;
+        }
+        .d1 {
+            font-family: "Microsoft YaHei", "STHuPo", sans-serif;
+            font-size: 40px;
+            font-style: italic;
+            color: skyblue;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .d2 {
+            background-color: yellow;
+            /* 字体复合属性中不包括颜色 */
+            font: italic 700 40px "Microsoft YaHei", "宋体", "STCaiYun", sans-serif;
+            color: green;
+        }
+
+        .d3 {
+            background-color: greenyellow;
+            word-spacing: 1px;
+            font: italic 700 40px "Microsoft YaHei";
+            color: blue; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">欢迎来到英雄联盟！</div>
+    <br>
+    <div class="d2">欢迎来到英雄联盟！</div>
+    <br>
+    <div class="d3">Welcome to LOL</div>
+    <br>
+    <div class="d4">欢迎来到英雄联盟！</div>
+    <br>
+    <div class="d5">欢迎来到英雄联盟！</div>
+</body>
+
+</html>
