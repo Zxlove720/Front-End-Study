@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS行高</title>
+    <style>
+        .box {
+            height: 500px;
+            background-color: skyblue;
+            font: italic bold 25px "Microsoft YaHei",sans-serif;
+            color: yellow;
+            /* 行高可用的单位：px，数字（相当于font-size的倍数，使用最多），百分比（相当于font-size的百分比） */
+            line-height: 1.5;
+            line-height: 150%;
+            line-height: 37.5px;
+            /* 上述三种表达方式效果相同 */
+        }
+
+        .test {
+            /* 如果容器设置了height，那么无论行高多少，以容器设置的高度为准，如果没有设置高度，则高度为行高 * 行数 */
+            /* height: 200px; */
+            background-color: skyblue;
+            font: italic bold 40px "Microsoft YaHei",sans-serif;
+            color: yellowgreen;
+            line-height: 1.5;
+        }
+
+        .test1 {
+            /* 当只有单行文字的时候，使行高和height相等可以让文字垂直居中 */
+            height: 500px;
+            background-color: skyblue;
+            font: italic bold 40px "Microsoft YaHei",sans-serif;
+            line-height: 500px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box">
+        <p>Lorem, ipsum dolor sit axmet consectetur adipisicing elit. Itaque omnis voluptas reprehenderit numquam, quibusdam nihil iste aliquam eveniet necessitatibus impedit, culpa sunt maiores facilis, enim laborum unde consequatur! Adipisci eaque, harum et reiciendis incidunt accusantium libero non doloremque consequuntur magni iste, natus, aliquid perspiciatis dolores commodi. Nobis impedit rerum officiis natus, perferendis est magnam, iusto dolor corporis nam ad deleniti minus in non, tempore repellat minima sit? Numquam laboriosam illo iusto totam quam accusantium eaque eum quod molestiae aliquid! Quam doloremque facilis suscipit deleniti nulla provident fugit repellendus ducimus iusto facere id, reiciendis earum ipsam odit quis illum delectus tempore.</p>
+    </div>
+    <br>
+    <br>
+    <div class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sint hic error reiciendis molestias ab veritatis tempore? Est illum labore voluptatibus deleniti! Minima rem quam debitis ratione tempore earum adipisci iusto dolor tenetur deleniti culpa sint saepe qui neque quaerat labore, ea laboriosam quasi excepturi itaque eligendi ut sit minus.</div>
+    <br>
+    <br>
+    <div class="test1">Lorem ipsum dolor sit amet.</div>
 </body>
 </html>
