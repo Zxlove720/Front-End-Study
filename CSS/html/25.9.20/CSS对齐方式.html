@@ -8,13 +8,60 @@
         .box {
             background-color: skyblue;
             height: 500px;
+            font-size: 150px;
+
+        }
+        
+        .test {
+            width: 50px;
+            vertical-align: top;
+        }
+
+        .test1 {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .test2 {
+            width: 50px;
+            vertical-align: bottom;
+        }
+
+        .test3 {
+            width: 50px;
+            vertical-align: baseline;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <span>这是一段文字x</span>
-        <img src="" alt="">
+        <!-- top，元素的顶部与其所在行的顶部对齐 -->
+        这是一段文字x
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose" class="test">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <!-- middle，元素的中部与父元素的基线加上父元素字母x的一半对齐 -->
+        这是一段文字x
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose" class="test1">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <!-- 元素的底部与所在行的底部对齐 -->
+        这是一段文字x
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose" class="test2">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <!-- 元素的基线与父元素的基线对齐 -->
+        这是一段文字x
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose" class="test3">
     </div>
 </body>
 </html>
