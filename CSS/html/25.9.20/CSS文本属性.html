@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>CSS文本属性</title>
+    <style>
+        div {
+            color: red;
+            color: rgb(255, 55, 55, 0.5);
+        }
+
+        .ident {
+            font-size: 40px;
+            color: black;
+            background-color: skyblue;
+            /* 这是每一个字符之间的间距 */
+            /* letter-spacing: 50px; */
+
+            /* 这是每一个单词（词语）之间的间距，是通过单词之间的空格来判断是否为一个单词的 */
+            word-spacing: 50px;
+        }
+
+        .decoration {
+            background-color: skyblue;
+            font-size: 40px;
+            text-decoration: underline dashed green;
+            text-decoration: line-through dotted green;
+            text-decoration: overline wavy green;
+            /* 一般用这个去除超链接的下划线 */
+            text-decoration: none;
+        }
+
+        p {
+            color: blue;
+            font-size: 50px;
+            text-indent: 100px;
+        }
+
+        .align {
+            color: skyblue;
+            font: italic bold 25px "Microsoft",sans-serif;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>文本颜色</div>
+
+    <!-- 文本间距 -->
+    <div class="ident">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, possimus.</div>
+
+    <br><br><br>
+
+    <!-- 文本装饰 -->
+    <div class="decoration">文本装饰</div>
+
+    <!-- 文本缩进 -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, magnam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, magnam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, magnam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, magnam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, magnam.</p>
+
+    <!-- 文本对齐 -->
+    <p class="align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ut dolore accusantium animi blanditiis dolores itaque asperiores aliquam officia quisquam inventore numquam id facilis tempore mollitia ipsum impedit qui magni.</p>
+</body>
+
+</html>
