@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS表格属性</title>
+    <style>
+        table {
+            /* 使用CSS控制表格边框，必须将边框的属性全部写完整 */
+            /* 边框大小 */
+            border-width: 1px;
+            /* 边框颜色 */
+            border-color: black;
+            /* 边框样式 */
+            border-style: solid;
+            /* 边框复合属性 */
+            border: 1px pink solid;
+            /* 边框属性并非特有，其他属性也可以使用 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 边框相关属性，其他元素也可以使用 -->
+    <table>
+        <caption>图书定价表</caption>
+        <thead>
+            <tr>
+                <th>书名</th>
+                <th>价格</th>
+                <th>如何</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Java开发</td>
+                <td>100</td>
+                <td>神</td>
+            </tr>
+            <tr>
+                <td>Python开发</td>
+                <td>100</td>
+                <td>屎</td>
+            </tr>
+            <tr>
+                <td>前端开发</td>
+                <td>100</td>
+                <td>香</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>好</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
