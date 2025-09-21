@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS列表属性</title>
+    <style>
+        .box {
+            height: 500px;
+            background-color: skyblue;
+            font: italic bold 25px "Microsoft YaHei",sans-serif;
+            color: yellow;
+        }
+        .address {
+            /* 设置列表符号（常用），一般会使用none去除列表符号 */
+            list-style-type: none;
+            /* 实心方块 */
+            list-style-type: square;
+            /* 圆形 */
+            list-style-type: disc;
+            /* 数字 */
+            /* 这也再次说明了元素的样式不重要，元素的语义才重要 */
+            list-style-type: decimal;
+        }
+
+        .study {
+            background-color: orange;
+            /* 控制列表符号位置 */
+            list-style-position: outside;
+            /* 自定义列表符号，但是这个图片需要合适的大小 */
+            list-style-image: url(../../../HTML/25.8.10/image/玫瑰.jpg);
+            /* 复合属性，顺序可以改变 */
+            list-style: decimal outside;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>想去的地方</h2>
+        <ul class="address">
+            <li>重庆</li>
+            <li>四川</li>
+            <li>深圳</li>
+            <li>上海</li>
+            <li>北京</li>
+        </ul>
+
+        <ul class="study">
+            <li>JAVA</li>
+            <li>前端</li>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>Go</li>
+        </ul>
+    </div>
+</body>
+</html>
