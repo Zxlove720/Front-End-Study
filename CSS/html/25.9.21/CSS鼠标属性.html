@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS鼠标属性</title>
+    <style>
+        .box {
+            height: 500px;
+            background-color: skyblue;
+        }
+        img {
+            width: 200px;
+        }
+
+        /* 可以通过cursor属性设置光标样式 */
+        img:hover {
+            /* 指针 */
+            cursor: pointer;
+        }
+
+        a:hover {
+            /* 等待 */
+            cursor: wait;
+        }
+
+        span {
+            /* 文字选择器 */
+            cursor: text;
+        }
+
+        h1 {
+            /* 帮助 */
+            cursor: help;
+        }
+
+        h2 {
+            /* 十字架 */
+            cursor: crosshair;
+        }
+
+        h3 {
+            /* 移动图标 */
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose">
+        <a href="https:www.baidu.com">去百度</a>
+        <span>文字选择器</span>
+        <h1>帮助</h1>
+        <h2>十字架</h2>
+        <h3>移动</h3>
+    </div>
+
+</body>
+</html>
