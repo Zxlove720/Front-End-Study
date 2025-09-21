@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.元素类型</title>
+    <style>
+        .box {
+            background-color: skyblue;
+            font: italic bold 25px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="inter1">
+            <p>
+                块元素（block）：在页面中独占一行，不会与任何元素共用一行，从上到下排列；
+                宽度撑满父元素，高度由内容撑开；
+                可以通过CSS设置宽高
+            </p>
+        </div>
+        <div class="inter2">
+            <p>
+                行内元素（inline）：在页面中不独占一行，行内元素在一行中从左向右排列，一行中不能容纳下的行内元素才会在下一行排列；
+                宽度由内容撑开，高度由内容撑开；
+                不能通过CSS设置宽高
+            </p>
+        </div>
+
+        <div class="inter3">
+            <p>
+                行内块元素（inline-block）：在页面中不独占一行，行内元素在一行中从左向右排列，一行中不能容纳下的行内元素才会在下一行排列；
+                宽度由内容撑开，高度由内容撑开；
+                但是可以通过CSS设置宽高
+            </p>
+        </div>
+
+        <div>
+            <p>
+                早期元素只分为行内元素和块级元素，区分条件是：是否独占一行
+            </p>
+        </div>
+
+        <div>
+            <p>
+                块元素主要是排版标签如h1-h6、p、div等；主体结构标签如html、body等；列表、表格相关标签；form和option标签
+                <br>
+                行内元素主要是文本标签如br、em、strong等；a和label也是行内元素；span是最经典的行内元素
+                <br>
+                行内块元素主要是图片img；单元格th、td；表单控件input、textarea、select、button等；框架标签iframe
+            </p>
+        </div>
+        
+        <div>
+            <p>
+                通过CSS的display属性可以修改元素的显示模式none会将元素隐藏
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
