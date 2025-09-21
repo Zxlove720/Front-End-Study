@@ -6,42 +6,28 @@
     <title>CSS表格属性</title>
     <style>
         table {
-            width: 300px;
-            font-size: 15px;
-            border: 1px solid black;
-            /* 设置列宽度 */
-            /* 默认自动，根据列宽自动计算 */
-            table-layout: auto;
-            /* 固定列宽，根据表格宽度平均分配 */
-            table-layout: fixed;
-
-            /* 单元格间距，必须在单元格边框不合并的条件下才可以生效  */
-            border-spacing: 5px;
-
-            /* 单元格边框合并，默认不合并 */
-            border-collapse: collapse;
-
-            /* 隐藏没有内容的单元格，默认不隐藏，必须在单元格边框不合并的条件下才可以生效，否则将会被四周的单元格边框拼成一个单元格 */
-            empty-cells: show;
-
-            /* 设置表格标题位置，默认在表格上方 */
-            caption-side: bottom;
-            text-align: center;
-        }
-        th, td {
-            border: 1px solid black;
+            /* 使用CSS控制表格边框，必须将边框的属性全部写完整 */
+            /* 边框大小 */
+            border-width: 1px;
+            /* 边框颜色 */
+            border-color: black;
+            /* 边框样式 */
+            border-style: solid;
+            /* 边框复合属性 */
+            border: 1px pink solid;
+            /* 边框属性并非特有，其他属性也可以使用 */
         }
     </style>
 </head>
 <body>
     <!-- 边框相关属性，其他元素也可以使用 -->
-    <table align="center">
+    <table>
         <caption>图书定价表</caption>
         <thead>
             <tr>
                 <th>书名</th>
                 <th>价格</th>
-                <th>如何评价</th>
+                <th>如何</th>
             </tr>
         </thead>
         <tbody>
