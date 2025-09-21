@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.长度单位</title>
+    <style>
+        html {
+            font-size: 125px;
+        }
+
+        .box {
+            background-color: red;
+            /* 最常使用的单位，像素 */
+            height: 500px;
+            /* 相对于元素的font-size的倍数大小，根本上还是像素 */
+            font-size: 50px;
+            height: 4em;
+            /* 相对于元素的根字体大小，html标签就是根 */
+            height: 4rem;
+            /* 相对于父元素计算百分比 */
+            width: 80%;
+
+            /* 像素、em、百分比使用较多 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
