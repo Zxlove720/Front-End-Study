@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.盒子模型概览</title>
+
+    <style>
+        .box {
+            height: 400px;
+            width: 400px;
+            background-color: skyblue;
+            padding: 20px;
+            border: 20px black solid;
+            margin: 20px;
+            font-size: bold 20px "Microsoft YaHei";
+        }
+
+        .inter {
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            padding: 20px;
+            border: 1px green solid;
+            font-size: bold 20px "Microsoft YaHei";
+        }
+
+        .inter2 {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            font-size: bold 20px "Microsoft YaHei";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        文字只会在盒子的内容区
+        <div class="inter">
+            文字只会在盒子的内容区
+
+            <div class="inter2">
+                文字只会在盒子的内容区
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p>
+        content内容区，元素中的文本及后代都只会在内容区中出现
+    </p>
+    <p>
+        padding内边距，紧贴内容区，位于内容区和border之间 
+    </p>
+    <p>
+        border边框，整个盒子的边框
+    </p>
+    <p>
+        margin外边距，盒子和外界的距离
+    </p>
+    <p>
+        margin不影响盒子的大小，其他属性都会影响盒子的大小；但是margin会影响盒子的位置
+        margin也是盒子模型的一个部分
+    </p>
+    <p>
+        计算盒子大小的时候需要加上四周的padding和border一起计算
+    </p>
+</body>
+
+</html>
