@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.盒子内容区</title>
+
+    <style>
+        .box1 {
+            /* 块元素可以通过width和height来设置宽度和高度，默认宽度是父元素的内容区，高度由内容撑开 */
+            width: 400px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        .box2 {
+            max-width: 1600px;
+            max-height: 800px;
+            background-color: yellowgreen;
+        }
+
+        .box3 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+        }
+
+        .box4 {
+            width: 200px;
+            min-width: 500px;
+            height: 200;
+            min-height: 500px;
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="box1">
+
+    </div> -->
+
+    <!-- <div class="box2">
+        <div class="box3">
+
+        </div>
+    </div> -->
+    <div class="box4">
+
+    </div>
+    <p>
+        优先级：min>max>width/height
+    </p>
+</body>
+</html>
