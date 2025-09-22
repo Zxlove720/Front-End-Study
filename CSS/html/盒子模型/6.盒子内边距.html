@@ -10,6 +10,7 @@
             width: 500px;
             height: 500px;
             background-color: skyblue;
+            /* padding的值不能为负数 */
             /* 盒子上边距 */
             padding-top: 100px;
             /* 盒子下边距 */
@@ -29,11 +30,50 @@
             /* 1个复合属性和两个复合属性使用比较多 */
             
         }
+
+        .box2 {
+            font: bold 25px "Microsoft YaHei",sans-serif;
+            background-color: yellow;
+        }
+
+        .box3 {
+            font: bold 25px "Microsoft YaHei",sans-serif;
+            background-color: skyblue;
+        }
+
+        .box4 {
+            padding: 100px;
+
+        }
+
+        .text1 {
+            padding: 200px;
+            /* display: inline-block; */
+            /* background-color: skyblue; */
+        }
     </style>
 </head>
 <body>
-    <div class="box">
+    <!-- <div class="box"></div> -->
 
+    <div class="box2">
+        <span class="text1">这是一段文字</span>
+        <span class="text2">这是一段文字</span>
+    </div>
+
+
+    <!-- <div class="box3">
+        <div class="box4">
+
+        </div>
+    </div> -->
+
+    <div>
+        <p>
+            行内元素的左右边距可以完美设置，但是上下边距无法完美设置
+            <br>
+            虽然通过f12查看可以设置上下padding，但是并不会撑开父元素的高度
+        </p>
     </div>
 </body>
 </html>
