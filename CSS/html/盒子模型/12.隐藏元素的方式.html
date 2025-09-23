@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.隐藏元素的方式</title>
+    <style>
+        .text {
+            font: bold 25px "Microsoft YaHei", sans-serif;
+            text-indent: 2em;
+            background-color: aliceblue;
+        }
+
+        .box {
+            width: 900px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+        }
+
+        .inter1 {
+            height: 300px;
+            background-color: rgb(30, 89, 37);
+            font: bold 25px "Microsoft YaHei", sans-serif;
+            visibility: hidden;
+            display: none;
+
+        }
+
+        .inter2 {
+            height: 300px;
+            background-color: salmon;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+        }
+
+        .inter3 {
+            height: 300px;
+            background-color: lemonchiffon;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p>
+            visibility属性可以控制一个元素是否可见，默认值是show，hidden可以让元素不显示；
+            <br>
+            但是visibility控制元素不可见，元素还是会在原位置占位，并不会消失，只是看不见而已。
+        </p>
+        <p>
+            display属性也可以控制一个元素是否可见，none值可以让元素消失，是直接消失。
+        </p>
+    </div>
+    <div class="box">
+        <div class="inter1">
+
+        </div>
+
+        <div class="inter2">
+
+        </div>
+
+        <div class="inter3">
+
+        </div>
+    </div>
+</body>
+</html>
