@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.margin合并问题</title>
+    <style>
+        .outer {
+            width: 800px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+        }
+        .inter1 {
+            width: 400px;
+            height: 250px;
+            background-color: purple;
+            margin-bottom: 200px;
+        }
+
+        .inter2 {
+            width: 400px;
+            height: 250px;
+            background-color: gray;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inter1">
+            inter1
+        </div>
+        <div class="inter2">
+            inter2
+        </div>
+    </div>
+
+    <div>
+        <p>
+            margin合并问题
+            <br>
+            上方的兄弟元素的下margin和下方的兄弟元素上margin会进行合并，会取一个最大值，并不会相加
+            <br>
+            无需解决合并问题，只需要在布局的时候根据需求，只设置下margin或上margin即可
+        </p>
+
+    </div>
+</body>
+</html>
