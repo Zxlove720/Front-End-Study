@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.盒子外边距</title>
+
+    <style>
+        .box {
+            background-color: skyblue;
+            width: 800px;
+            height: 400px;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+            /* margin可以调整元素的外边距，可以设置元素四周的外边距 */
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            /* 也可以像padding一样写1-4个值代表不同的意思 */
+            margin: 10px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>
+            margin是参照父元素的content区进行计算的，以为子元素是在父元素的content区中的
+            <br>
+            <br>
+
+            <strong>上、左margin影响自己的位置；下、右margin影响兄弟元素的位置</strong>
+        </p>
+    </div>
+</body>
+</html>
