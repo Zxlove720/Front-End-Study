@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13.样式的继承</title>
+    <style>
+        .box {
+            background-color: skyblue;
+            width: 800px;
+            height: 500px;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>
+            元素可以继承某些样式，但是如果元素本身设置了样式，就会覆盖继承的样式，这和Java子类重写父类方法是异曲同工的——
+            元素继承的样式优先级是十分低的。
+            <br>
+            如果元素没有设置样式，会从父元素开始逐步向外继承（就近原则）。
+        </p>
+    </div>
+</body>
+</html>
