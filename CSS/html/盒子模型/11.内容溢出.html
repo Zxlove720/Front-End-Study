@@ -18,6 +18,13 @@
             overflow: auto;
             /* 隐藏溢出部分 */
             overflow: hidden;
+
+            /* overflow-x可以控制水平方向的溢出 */
+            overflow-x: scroll;
+
+            /* overflow-y可以控制垂直方向的溢出 */
+            overflow-y: auto;
+
         }
 
         .box {
@@ -30,6 +37,13 @@
 <body>
     <div class="outer">
         <div class="box"></div>
+        <p>
+            但是overflow-x和overflow-y不能一个是hidden，一个是visible；并且overflow-xy是一个实验的属性，不建议使用
+            <br>
+            <br>
+            <br>
+            overflow常用的值一般是hidden和auto
+        </p>
     </div>
 </body>
 </html>
