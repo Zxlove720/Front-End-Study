@@ -19,6 +19,9 @@
             /* 也可以像padding一样写1-4个值代表不同的意思 */
             margin: 10px;
             margin: 10px auto;
+
+            margin-right: -50px;
+            margin-top: -100px;
         }
     </style>
 </head>
@@ -30,6 +33,16 @@
             <br>
 
             <strong>上、左margin影响自己的位置；下、右margin影响兄弟元素的位置</strong>
+
+            和padding一样，行内元素无法完美设置margin，上下设置无效，左右可以生效；块元素才可以完美设置
+            <br>
+            <br>
+
+            margin的值可以是auto，如果一个块元素的左右margin都是auto，那么这个块元素就会居中
+            <br>
+            <br>
+
+            margin的值也可以为负值
         </p>
     </div>
 </body>
