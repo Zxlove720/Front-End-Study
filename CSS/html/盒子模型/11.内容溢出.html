@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.内容溢出</title>
+    <style>
+        .outer {
+            width: 500px;
+            height: 400px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+            /* 可以通过CSS中的overflow控制内容溢出，默认值是visible，代表溢出部分可见 */
+            overflow: visible;
+            /* 不论内容是否溢出，都显示滚动条（没溢出则无法滚动），便于查看溢出部分 */
+            overflow: scroll;
+            /* 如果内容溢出，显示滚动条，便于查看溢出部分；如果内容不溢出，则不显示滚动条 */
+            overflow: auto;
+            /* 隐藏溢出部分 */
+            overflow: hidden;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
