@@ -12,6 +12,10 @@
             font: bold 25px "Microsoft YaHei", sans-serif;
         }
 
+        p {
+            font: italic 30px "宋体",serif;
+        }
+
     </style>
 </head>
 <body>
@@ -21,6 +25,22 @@
             元素继承的样式优先级是十分低的。
             <br>
             如果元素没有设置样式，会从父元素开始逐步向外继承（就近原则）。
+        </p>
+
+        <p>
+            能继承的属性：
+            <br>
+            一般为字体属性：文本属性（除了vertical-align）、文字颜色等
+            <br>
+            <br>
+            <br>
+            不能继承的属性：
+            <br>
+            一般为布局属性：边框、背景、内边距、宽高、溢出方式等
+            <br>
+            <strong>
+                总结而言，能继承的都是不影响布局的属性；再换句话说，都不是盒子相关的属性
+            </strong>
         </p>
     </div>
 </body>
