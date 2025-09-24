@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.元素空白问题</title>
+    <Style>
+        .box {
+            width: 1000px;
+            height: 500px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+            font-size: 0px;
+        }
+
+        span {
+            font: bold 25px "Microsoft YaHei",sans-serif;
+
+        }
+    </Style>
+</head>
+<body>
+    <div class="box">
+        <span>我是一段文字</span>
+        <span>我也是一段文字</span>
+        <br>
+        <span>发现问题：虽然两个元素间没有空格，但是当行内元素和行内块元素在换行时会被解析为一个空白字符</span>
+        <br>
+        <span>
+            解决方法：
+            <br>
+            1.去掉元素之间的换行，但显然是不推荐的，编码不美观
+            <br>
+            2.将父元素的font-size设置为0，然后再给子元素单独设置字体大小
+        </span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <span>我是一段文字</span>
+        <span>我也是一段文字</span>
+    </div>
+</body>
+</html>
