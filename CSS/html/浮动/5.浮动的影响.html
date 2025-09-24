@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.浮动的影响</title>
+    <style>
+        .box {
+            width: 300px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+        }
+        .inter {
+            width: 100px;
+            height: 100px;
+        }
+
+        .inter1 {
+            background-color: yellowgreen;
+        }
+
+        .inter2 {
+            background-color: blue;
+            float: left;
+        }
+
+        .inter3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inter inter1">1</div>
+        <div class="inter inter2">2</div>
+        <div class="inter inter3">3</div>
+    </div>
+
+    <div class="text">
+        <h2>元素浮动之后的影响</h2>
+        <p>
+            对兄弟元素的影响：
+            <br>
+            在元素后面的兄弟元素会占据浮动元素之前的位置，从z轴的角度看，是在浮动元素的下面（被浮动元素遮盖）
+            但是对于浮动元素之后的元素无影响
+        </p>
+
+        <p>
+            对父元素的影响
+            <br>
+            不能撑起父元素的高度，会导致父元素塌陷；但是即使父元素塌陷了，父元素的宽度也会限制浮动的元素
+            （浮动的元素也不能超过父元素的宽度）
+
+        </p>
+    </div>
+</body>
+</html>
