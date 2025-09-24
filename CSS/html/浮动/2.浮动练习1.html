@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.浮动练习1</title>
+    <style>
+        .box {
+            width: 800px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+        }
+
+        .inter1 {
+            width: 600px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+        }
+
+        .inter2 {
+            width: 600px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+
+        .inter3 {
+            width: 600px;
+            height: 200px;
+            background-color: rgb(246, 23, 160);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inter1">
+            inter1
+        </div>
+        <div class="inter2">
+            inter2
+        </div>
+        <div class="inter3">
+            inter3
+        </div>
+    </div>
+    <div class="text">
+        <h2>浮动最初是为了实现文字环绕图片的效果的，经过多年发展，成为了一个主流的页面布局方式</h2>
+        <p>
+            当一个元素浮动脱离了文档流之后，兄弟元素会尝试填充其本来的位置，但是其中的文字会感知到浮动元素的存在从而避开它，
+            进行环绕或者在其下方；如果空间不足或者布局计算意外，那么有可能和其他元素的文字发生重叠
+
+        </p>
+    </div>
+</body>
+</html>
