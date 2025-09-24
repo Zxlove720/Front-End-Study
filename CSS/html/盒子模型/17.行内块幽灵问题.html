@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.行内块幽灵问题</title>
+    <style>
+        .box {
+            width: 1000px;
+            background-color: skyblue;
+            /* font: bold 25px "Microsoft YaHei", sans-serif; */
+            font-size: 0px;
+        }
+
+        span {
+            font-size: 25px;
+        }
+
+        img {
+            height: 200px;
+            /* vertical-align: top; */
+            /* display: block; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>
+        因为行内块元素需要和x基线对齐，而x本身距离元素底部有距离，所以说行内块元素并不能完全贴合元素底部，有一块空隙
+        </span>
+        <br>
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose">
+        <span>x</span>
+    </div>
+    <br>
+    <div class="box">
+        <p>
+            解决方法：
+            <br>
+            1.给行内块元素设置vertical-align，只要不为baseline即可（推荐这种办法）
+            <br>
+            2.若父元素中只有一张图片，则将图片设置display:block（这种做法比较局限）
+            <br>
+            3.给父元素设置font-size:0即可，如果元素中还有文字，则单独设置font-size
+        </p>
+    </div>
+</body>
+
+</html>
