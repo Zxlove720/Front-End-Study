@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动练习2</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 800px;
+            background-color: skyblue;
+            /* font-size: 0; */
+        }
+
+        .inter1 {
+            width: 600px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+        }
+
+        .inter2 {
+            width: 600px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+
+        .inter3 {
+            width: 600px;
+            height: 200px;
+            background-color: rgb(246, 23, 160);
+        }
+
+        .span1 {
+            background-color: orange;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+            float: left;
+            
+        }
+
+        .span2 {
+            background-color: red;
+            font: bold 25px "Microsoft YaHei",sans-serif;
+
+        }
+
+        .image {
+            width: 500px;
+            background-color: skyblue;
+        }
+
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="span1">我是span</span>
+        <span class="span2">我也是span</span>
+    </div>
+
+    <div class="text">
+        <p>
+            如果浮动的是行内元素，那么内容并不会环绕，而是会紧贴并尝试和浮动元素并排显示
+        </p>
+    </div>
+
+    <div class="image">
+        <img src="../../../HTML/25.8.10/image/玫瑰.jpg" alt="rose">
+    </div>
+</body>
+</html>
