@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5.浮动的影响</title>
     <style>
-        .box {
-            width: 300px;
-            background-color: skyblue;
-            font: bold 25px "Microsoft YaHei",sans-serif;
+        .box::after {
+            content: "";
+            display: block;
+            clear: both;
         }
+
+        .box {
+            width: 500px;
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+        }
+
+        .text {
+            background-color: skyblue;
+            font: bold 25px "Microsoft YaHei", sans-serif;
+
+        }
+
         .inter {
             width: 100px;
             height: 100px;
@@ -17,18 +31,23 @@
 
         .inter1 {
             background-color: yellowgreen;
+            float: left
         }
 
         .inter2 {
             background-color: blue;
-            float: left;
+            float: left; 
+
         }
 
         .inter3 {
             background-color: green;
+            float: left
+
         }
     </style>
 </head>
+
 <body>
     <div class="box">
         <div class="inter inter1">1</div>
@@ -50,8 +69,27 @@
             <br>
             不能撑起父元素的高度，会导致父元素塌陷；但是即使父元素塌陷了，父元素的宽度也会限制浮动的元素
             （浮动的元素也不能超过父元素的宽度）
-
         </p>
     </div>
+
+    <div class="text">
+        <h2>消除元素浮动之后的影响</h2>
+        <p>
+            1.给父元素设置高度，可解决父元素塌陷问题
+            <br>
+            2.（千万慎用）给父元素也设置浮动，可以解决父元素塌陷，但是不建议使用，这样会出现更多的问题
+            <br>
+            3.给父元素设置overflow:hidden，虽然可以解决，但是并非是最好的方式
+            <br>
+            4.在所有浮动的元素的最后面，添加一个块级元素，并且给这个块级元素设置clear:both。
+            clear是专门用于清除浮动带来的影响的，可以通过left和right设置清除左浮动或右浮动，both是左右都清除
+            <br>
+            5.给浮动元素的父元素，使用伪元素选择器设置伪元素，通过伪元素清除浮动，原理和方案四相同，相较于方案四
+            只是没有额外创建新的元素
+        </p>
+    </div>
+
+
 </body>
+
 </html>
