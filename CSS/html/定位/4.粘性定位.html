@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.粘性定位</title>
+
+    <style>
+        .head {
+            background-color: skyblue;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .scroll {
+            height: 50px;
+            background-color: orange;
+            line-height: 50px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        h2 {
+            background-color: gray;
+            margin: 0;
+            border: 1px black solid;
+        }
+
+        .content {
+            height: 10000px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>粘性定位</h1>
+    <p>
+        给元素设置position:sticky即可开启粘性地位，最常用的是top设置位置
+    </p>
+    <h2>粘性定位参考点</h2>
+    <p>
+        粘性定位的参考点是距离其最近的拥有<strong>滚动机制</strong>的祖先元素（具备滚动条），即使这个元素并不是真的可以滚动，不能滚动的元素
+        会作为粘性定位的参考点，但是不能使粘性定位生效，反而会让粘性定位的参考点错误，在使用粘性定位的时候必须清楚到底哪个元素拥有滚动机制
+    </p>
+    <h2>粘性定位特点</h2>
+    <p>
+        1.不会脱离文档流，其是一种专门用于窗口滚动时的新的定位方式
+        <br>
+        2.最常使用的是top值
+        <br>
+        3.粘性定位可以和浮动同时设置，但是十分不推荐这样使用
+        <br>
+        4.粘性定位的元素可以通过margin调整位置，但是十分不推荐这样使用
+        <br>
+        5.粘性定位的特点和相对定位的特点基本一致，但不同的是：粘性定位可以在元素到达某个位置的时候将其固定
+    </p>
+    <div class="head">head</div>
+    <div class="content">
+        <div class="item">
+            <div class="scroll">A</div>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+            <h2>A</h2>
+        </div>
+        <div class="item">
+            <div class="scroll">B</div>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+            <h2>B</h2>
+        </div>
+
+        <div class="item">
+            <div class="scroll">C</div>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+            <h2>C</h2>
+        </div>
+
+        <div class="item">
+            <div class="scroll">D</div>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+            <h2>D</h2>
+        </div>
+
+        <div class="item">
+            <div class="scroll">E</div>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+            <h2>E</h2>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
