@@ -17,6 +17,7 @@
             background-color: yellow;
             position: relative;
             bottom: 120px;
+            
         }
 
         .inter2 {
@@ -26,7 +27,7 @@
             position: absolute;
             top: 100px;
             left: 20px;
-            z-index: 5;
+            z-index: 1;
         }
 
         .inter3 {
@@ -36,7 +37,6 @@
             position: fixed;
             top: 50px;
             left: 10px;
-            z-index: 10;
         }
     </style>
 </head>
@@ -49,7 +49,7 @@
         但是在定位元素之间，无论什么定位，显示层级都是一样的；如果定位元素之间发生位置重叠，那么采取后来者居上原则，后写的元素在先写的元素之上
     </p>
     <p>
-        但是在定位元素之间可以通过z-index调整显示层级，其属性值是纯数字，没有单位，值越大显示层级越高。z-index仅限于定位元素之间使用
+        但是在定位元素之间可以通过z-index调整显示层级，其属性值是纯数字（默认是0），没有单位，值越大显示层级越高。z-index仅限于定位元素之间使用
     </p>
     <p>
         如果使用了z-index，出现和预期不符的效果，请检查包含块的层级
