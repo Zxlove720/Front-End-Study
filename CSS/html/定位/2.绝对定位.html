@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.绝对定位</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        .box {
+            width: 1000px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        .inter1 {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        .inter2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .inter3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        p {
+            font: 20px "Microsoft YaHei", sans-serif;
+            text-indent: 2em;
+        }
+
+        h1 {
+            font: bold 50px "宋体", serif;
+            text-align: center;
+        }
+
+        h2 {
+            font: bold 30px "宋体", serif;
+            text-align: center;
+        }
+
+        span {
+            background-color: red;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inter1">inter1</div>
+        <div class="inter2">inter2</div>
+        <div class="inter3">inter3</div>
+    </div>
+
+    <h1>绝对定位</h1>
+    <p> 
+        和相对定位相似，通过position:absolute开启绝对定位，通过left、right、top、bottom四个属性调整四个方向的位置
+    </p>
+    <h2>绝对定位的参考点</h2>
+    <p>
+        绝对定位参考其包含块
+        <br>
+        1.对于没有脱离文档流的元素，包含块就是其父元素
+        <br>
+        2.对于脱离了文档流的元素，包含块就是其第一个开启定位的祖先元素；如果所有的祖先元素都没有开启定位，那么包含块就是整个页面
+    </p>
+    <h2>绝对定位的特点</h2>
+    <p>
+        1.绝对定位元素将脱离文档流，会对其后面的兄弟元素、父元素有影响（脱离文档流带来的影响）
+        <br>
+        2.绝对定位和浮动不能一起设置，如果同时设置则浮动失效、以定位为主
+        <br>
+        3.绝对定位元素也可以通过margin调整位置，但是十分不建议这样使用
+        <br>
+        4.无论是什么元素（行内、块、行内块）设置了绝对定位之后都会变成定位元素———默认的宽高都由内容撑开、并且可以自由设置宽高
+    </p>
+
+    <span>我是一段文字</span>
+
+
+        
+
+</body>
+
+</html>
