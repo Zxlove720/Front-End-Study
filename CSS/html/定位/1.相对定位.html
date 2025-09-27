@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.相对定位</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1000px;
+            height: 500px;
+            background-color: skyblue;
+            overflow: hidden;
+        }
+        
+        .inter {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            top: 200px;
+            /* margin-top: 100px; */
+            /* margin-bottom: 100px; */
+        }
+
+        .inter2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .inter3 {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+
+        .text {
+            width: 1000px;
+            height: 300px;
+        }
+
+        p {
+            font: 20px "Microsoft YaHei",sans-serif;
+            text-indent: 2em;
+        }
+
+        h2 {
+            margin: 0 auto;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inter">inter</div>
+        <div class="inter2">inter2</div>
+        <div class="inter3">inter3</div>
+    </div>
+
+    <div class="text">
+        <h2>相对定位</h2>
+        <h3>如何设置相对定位</h3>
+        <p>
+            给元素设置position:relative即可实现相对定位
+        </p>
+        <p>
+            可以通过left、right、top、bottom四个属性值调整元素相对定位的位置
+        </p>
+
+        <h2>相对定位的参考点</h2>
+        <p>
+            相对定位将参考元素开启定位之前的位置，在开启定位之前，元素在哪，相对定位就从哪里开始计算
+        </p>
+
+        <h2>相对定位特点</h2>
+        <p>
+            相对定位不会脱离文档流，元素位置的变化只是视觉效果的变化，不会对其他元素产生影响
+            <strong>但是它在文档流中的位置仍然保留</strong>
+            ，假如给定位元素添加margin等，是会从其文档流中的原位置开始计算的。
+            <br>
+            1.即使元素相对定位后空出的空间能够容纳其他元素，其他元素也不会占据这个位置
+            <br>
+            2.定位元素的显示层级比普通元素高，但是不同的定位层级之间，显示的层级都是一样的
+            <br>
+            显示层级的默认的规则是：
+            <br>
+            定位的元素因为显示层级比普通元素高，所以说只要开启了定位的元素，无论先后顺序，都会覆盖在普通的元素（没有开启定位）之上
+            <br>
+            都发生了定位的两个元素，后写的元素会覆盖在先写的元素之上
+            <br>
+            3.定位中left和right不能一起设置；top和bottom不能一起设置，如果一起设置，只有top和left可以生效
+            <br>
+            4.相对定位的元素可以继续浮动，但是十分不推荐定位和浮动一起使用
+            <br>
+            5.相对定位的元素可以通过margin调整位置，但是十分不推荐使用margin调整位置——既然使用了定位，就直接使用定位调整位置即可
+        </p>
+    </div>
+    
+</body>
+</html>
