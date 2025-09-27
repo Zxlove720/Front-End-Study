@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.定位层级</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 6000px;
+            background-color: skyblue;
+        }
+
+        .inter1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+            bottom: 120px;
+        }
+
+        .inter2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            top: 100px;
+            left: 20px;
+            z-index: 5;
+        }
+
+        .inter3 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(248, 113, 71);
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h1>定位层级</h1>
+    <p>
+        定位元素的显示层级比普通元素高，并且也高于浮动元素，其显示层级是：定位元素>浮动元素>标准流元素
+    </p>
+    <p>
+        但是在定位元素之间，无论什么定位，显示层级都是一样的；如果定位元素之间发生位置重叠，那么采取后来者居上原则，后写的元素在先写的元素之上
+    </p>
+    <p>
+        但是在定位元素之间可以通过z-index调整显示层级，其属性值是纯数字，没有单位，值越大显示层级越高。z-index仅限于定位元素之间使用
+    </p>
+    <p>
+        如果使用了z-index，出现和预期不符的效果，请检查包含块的层级
+    </p>
+
+    <div class="box">
+        <div class="inter2">inter2</div>
+        <div class="inter3">inter3</div>
+        <div class="inter1">inter1</div>
+
+    </div>
+</body>
+</html>
