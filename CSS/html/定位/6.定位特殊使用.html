@@ -21,6 +21,22 @@
             top: 0px;
             bottom: 0px;
         }
+
+        .box2 {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            overflow: hidden;
+        }
+
+        .inter2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border: 10px black solid;
+            margin-left: 140px;
+            margin-top: 140px;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +46,7 @@
         所以说以下特殊应用只针对绝对定位和固定定位，和相对定位无关
     </p>
 
-    <h2>让元素充满包含块</h2>
+    <h2>让定位元素充满包含块</h2>
     <div class="box">
         <div class="inter">
             想让块的宽和包含块保持一致，那么可以将定位元素的left和right同时设为0（本来这两个属性同时出现，right不生效，但是同时设置为0是特殊用法）
@@ -38,6 +54,19 @@
             想让块的高和包含块保持一致，那么可以将定位元素的top和bottom同时设为0（本来这两个属性同时出现，bottom不生效，但是同时设置为0是特殊用法）
             <br>
             由此可知，可以将块的left、right、top、bottom同时设置为0，就可以让定位元素充满整个包含块（此时就不要设置width了）
+        </div>
+    </div>
+
+    <h2>让定位元素在包含块居中</h2>
+    <div class="box2">
+        <div class="inter2">
+            想让一个元素在父元素中居中可以通过计算，然后用margin来调整（注意margin塌陷问题）
+            <br>
+            通过定位元素的特殊用法也可以让其在包含块中居中
+            <br>
+            方法1：设置left、right、top、bottom为0，然后margin设置auto
+            <br>
+            方法2：设置left、top为50%，然后设置margin-left为-元素宽度一半；margin-top为-高度一半
         </div>
     </div>
 
