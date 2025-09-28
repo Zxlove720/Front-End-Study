@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.定位特殊使用</title>
+    <style>
+        .box {
+            height: 500px;
+            background-color: skyblue;
+            position: relative;
+        }
+
+        .inter {
+            height: 400px;
+            border: 10px black solid;
+            background-color: yellow;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>定位特殊使用</h1>
+    <p>
+        因为发生了绝对定位和固定定位的元素会脱离文档流，元素变为定位元素；而相对定位的元素仍然是之前的显示模式
+        所以说以下特殊应用只针对绝对定位和固定定位，和相对定位无关
+    </p>
+
+    <h2>让元素充满包含块</h2>
+    <div class="box">
+        <div class="inter">
+            想让块的宽和包含块保持一致，那么可以将定位元素的left和right同时设为0（本来这两个属性同时出现，right不生效，但是同时设置为0是特殊用法）
+            <br>
+            想让块的高和包含块保持一致，那么可以将定位元素的top和bottom同时设为0（本来这两个属性同时出现，bottom不生效，但是同时设置为0是特殊用法）
+            <br>
+            由此可知，可以将块的left、right、top、bottom同时设置为0，就可以让定位元素充满整个包含块（此时就不要设置width了）
+        </div>
+    </div>
+
+</body>
+</html>
