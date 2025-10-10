@@ -1,0 +1,1 @@
+alert("Hello JavaScript! 我是外部引入")
