@@ -23,10 +23,19 @@ let str6 = `我是'字符串'`
 // console.log(username + null);
 // console.log(username + true);
 
+// let username = prompt("请输入您的用户名")
+// let password = prompt("请输入您的密码")
+// document.writeln("<h2>您的用户名是：" + username + "</h2>")
+// document.writeln("<h2>您的密码是：" + password + "</h2>")
+
+// 但是这样使用+运算符进行字符串拼接稍显麻烦并且不够优雅，所以说推荐使用模板字符串进行拼接
+// 使用``包裹字符串，然后在${}中写想要拼接的字符串即可
 let username = prompt("请输入您的用户名")
 let password = prompt("请输入您的密码")
-document.writeln("<h2>您的用户名是：" + username + "</h2>")
-document.writeln("<h2>您的密码是：" + password + "</h2>")
+document.writeln(`<h2>您的用户名是${username}</h2>`)
+document.writeln(`<h2>您的用户名是${password}</h2>`)
+// 这样在面对复杂的拼接时可以更加得心应手，并且书写也更加的优雅，建议字符串拼接都使用模板字符串
+
 
 
 
