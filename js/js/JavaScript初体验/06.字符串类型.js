@@ -30,11 +30,30 @@ let str6 = `我是'字符串'`
 
 // 但是这样使用+运算符进行字符串拼接稍显麻烦并且不够优雅，所以说推荐使用模板字符串进行拼接
 // 使用``包裹字符串，然后在${}中写想要拼接的字符串即可
-let username = prompt("请输入您的用户名")
-let password = prompt("请输入您的密码")
-document.writeln(`<h2>您的用户名是${username}</h2>`)
-document.writeln(`<h2>您的用户名是${password}</h2>`)
+// let username = prompt("请输入您的用户名")
+// let password = prompt("请输入您的密码")
+// document.writeln(`<h2>您的用户名是${username}</h2>`)
+// document.writeln(`<h2>您的用户名是${password}</h2>`)
 // 这样在面对复杂的拼接时可以更加得心应手，并且书写也更加的优雅，建议字符串拼接都使用模板字符串
+
+// 不同数据类型的显式转换和隐式转换
+// 隐式转换
+let a = "4"
+let b = 5
+console.log(a + b); // 45 当一个字符串类型 + 任意类型，会将其他类型数据转换为字符串类型进行拼接
+console.log(a - b); // 在进行运算操作时刻，操作符如果不是+，而是其他的运算符，会将其他类型的数据尝试转换为数字类型，再进行数学运算
+console.log(a * b); // 20
+console.log(parseInt(a / b)); // 0.8
+console.log(a % b); // 4
+console.log(a ** b); // 1024 
+let c = false // false转换为数字类型是0，true是1
+console.log(a - c)
+
+let d = "一"
+console.log(1 / d); // 只有纯数字构成的字符串才可以被转换为数字类型进行计算，否则将会产生NaN问题
+
+
+
 
 
 
