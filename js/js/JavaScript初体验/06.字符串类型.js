@@ -43,7 +43,7 @@ let b = 5
 console.log(a + b); // 45 当一个字符串类型 + 任意类型，会将其他类型数据转换为字符串类型进行拼接
 console.log(a - b); // 在进行运算操作时刻，操作符如果不是+，而是其他的运算符，会将其他类型的数据尝试转换为数字类型，再进行数学运算
 console.log(a * b); // 20
-console.log(parseInt(a / b)); // 0.8
+console.log(a / b); // 0.8
 console.log(a % b); // 4
 console.log(a ** b); // 1024 
 let c = false // false转换为数字类型是0，true是1
@@ -52,6 +52,7 @@ console.log(a - c)
 let d = "一"
 console.log(1 / d); // 只有纯数字构成的字符串才可以被转换为数字类型进行计算，否则将会产生NaN问题
 
+console.log("hello" + undefined)
 
 
 
