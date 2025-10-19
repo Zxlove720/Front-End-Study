@@ -13,28 +13,41 @@
 // document.write(`${number1}、${number2}、${number3}中最大的数字是${number1 > number2 ? (number1 > number3 ? number1 : number3) : (number2 > number3 ? number2 : number3)}`)
 
 // switch简易计算器
-let number1 = +prompt("请输入第一个数")
-let number2 = +prompt("请输入第二个数")
-let operation = prompt("请输入操作符")
-switch (operation) {
-  case '+':
-    document.write(`${number1}${operation}${number2} = ${number1 + number2}`)
-    break
-  case '-':
-    document.write(`${number1}${operation}${number2} = ${number1 - number2}`)
-    break
-  case '*':
-    document.write(`${number1}${operation}${number2} = ${number1 * number2}`)
-    break
-  case '/':
-    document.write(`${number1}${operation}${number2} = ${number1 / number2}`)
-    break
-  case '%':
-    document.write(`${number1}${operation}${number2} = ${number1 % number2}`)
-    break
-  case '**':
-    document.write(`${number1}${operation}${number2} = ${number1 ** number2}`)
-    break
-  default:
-    document.write("运算符输入违法")
+// let number1 = +prompt("请输入第一个数")
+// let number2 = +prompt("请输入第二个数")
+// let operation = prompt("请输入操作符")
+// switch (operation) {
+//   case '+':
+//     document.write(`${number1}${operation}${number2} = ${number1 + number2}`)
+//     break
+//   case '-':
+//     document.write(`${number1}${operation}${number2} = ${number1 - number2}`)
+//     break
+//   case '*':
+//     document.write(`${number1}${operation}${number2} = ${number1 * number2}`)
+//     break
+//   case '/':
+//     document.write(`${number1}${operation}${number2} = ${number1 / number2}`)
+//     break
+//   case '%':
+//     document.write(`${number1}${operation}${number2} = ${number1 % number2}`)
+//     break
+//   case '**':
+//     document.write(`${number1}${operation}${number2} = ${number1 ** number2}`)
+//     break
+//   default:
+//     document.write("运算符输入违法")
+// }
+
+// while求偶数和
+let start = +prompt("请输入起始数字")
+let end = +prompt("请输入末尾数字")
+let i = start
+let sum = 0
+while (i <= end) {
+  if (i % 2 == 0) {
+    sum += i
+  }
+  i++
 }
+document.write(`${start}和${end}之间的偶数和为${sum}`)
