@@ -6,9 +6,9 @@ for (let i = 1; i <= month; i++) {
 document.write(`<div class="box">`)
 for (let i = 0; i < sum.length; i++) {
   document.write(
-    `<div style="height: ${sum[i]};">
+    `<div style="height: ${sum[i]}px;">
       <span>${sum[i]}</span>
-      <h4>${i + 1}</h4>
+      <h4>第${i + 1}季度</h4>
     </div>`
   )
 }
