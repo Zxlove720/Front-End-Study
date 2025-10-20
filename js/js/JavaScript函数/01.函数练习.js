@@ -10,16 +10,16 @@
 // 求数组最值
 function max(array = []) {
   let max = array[0]
-  for (let i = 0; i < array.length - 1; i++) {
-    max = max > array[i + 1] ? max : array[i + 1]
+  for (let i = 1; i < array.length; i++) {
+    max = max > array[i] ? max : array[i]
   }
   return max
 }
 
 function min(array = []) {
   let min = array[0]
-  for (let i = 0; i < array.length - 1; i++) {
-    min = min < array[i + 1] ? min : array[i + 1]
+  for (let i = 1; i < array.length; i++) {
+    min = min < array[i] ? min : array[i]
   }
   return min
 }
