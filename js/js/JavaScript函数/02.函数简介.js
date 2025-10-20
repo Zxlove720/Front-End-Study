@@ -73,3 +73,22 @@
 //   fn2()
 // }
 // fn1() // 控制台会输出30，这是由于JavaScript中变量的访问规则——优先访问离自己作用域最近的变量
+
+// let fn = function (a, b) {
+//   return a + b
+// }
+// console.log(fn(1, 2)) // 控制台会输出3
+
+// console.log(fn(1, 2)) // 直接报错，Cannot access 'fn' before initialization（大概意思是不能在定义前使用）
+// let fn = function (a, b) {
+//   return a + b
+// }
+
+// 立即函数的两种定义方式
+(function () { })();
+
+(function () { }());
+
+(function (a, b) {
+  console.log(a + b)
+})(1, 2); // 控制台会输出3
