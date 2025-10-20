@@ -5,12 +5,32 @@
 
 // 虽然JavaScript不支持函数重载，但是可以写多个重名函数。
 // 但是并非可以使用这些重名函数，其规则和CSS一样：后定义的函数会覆盖掉先定义的函数！
-function fn() {
-  console.log("第一个函数")
-}
+// function fn() {
+//   console.log("第一个函数")
+// }
 
-function fn() {
-  console.log("第二个函数")
-}
-fn() // 调用函数，控制台输出"第二个函数"
+// function fn() {
+//   console.log("第二个函数")
+// }
+// fn() // 调用函数，控制台输出"第二个函数"
 // 是因为第二个函数比第一个函数后写，所以说才会执行第二个函数；并不是因为调用时距离第二个函数更近
+
+
+// java对于函数的传参有着严格的要求，参数个数，参数类型，实参和形参必须严格匹配，否则直接报错！
+// 但是JavaScript中没有这样严格的要求——参数个数不匹配，甚至不传参数都不会报错，整个程序都会正常运行：
+// function getSum(a, b) {
+//   return a + b
+// }
+// console.log(getSum()) // 控制台输出NaN
+
+// function getSum(a, b) {
+//   return a + b
+// }
+// console.log(getSum(1, 2, 3)) // 控制台输出2，多传参的参数3会被函数忽略，形参只按照顺序接收了1和2
+
+// function getSum(a, b, c) {
+//   return a + b + c
+// }
+// console.log(getSum(1, 2)) // 控制台输出NaN
+// 因为函数需要三个参数，但是调用时只传递了两个参数，形参列表按照顺序接收参数，
+// 形参a和b接收到传递的参数1和2，但是没有参数给形参c获取，所以说c是undefined，这会导致a+b+c的结果是NaN。
