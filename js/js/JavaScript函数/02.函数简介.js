@@ -92,3 +92,10 @@
 (function (a, b) {
   console.log(a + b)
 })(1, 2); // 控制台会输出3
+
+
+function test() {
+  number = 10
+}
+test()
+console.log(number) // 控制台会输出10
