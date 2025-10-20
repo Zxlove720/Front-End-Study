@@ -39,3 +39,23 @@
 //   return a + b + c
 // }
 // console.log(getSum(1, 2)) // 此时控制台会输出3
+
+// let number = 10 // 这个变量是全局变量，整个js文件可用
+// function fn() {
+//   console.log(number)
+// }
+// fn1() // 控制台输出10
+
+// // 全局变量在整个js文件中都可用
+
+// function fn() {
+//   let number = 10 // 这个变量是局部变量，只在fn函数的作用域中有效
+// }
+// console.log(number) // 直接报错，因为在全局作用域中没有定义number这个变量
+
+// let number = 10 // 这是全局变量
+// function fn() {
+// 	let number = 20 // 这是局部变量
+// 	console.log(number) // 在局部变量的作用域中会优先考虑局部变量
+// }
+// fn()
