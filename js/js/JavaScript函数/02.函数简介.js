@@ -59,3 +59,17 @@
 // 	console.log(number) // 在局部变量的作用域中会优先考虑局部变量
 // }
 // fn()
+
+// let number = 10
+// function fn1() {
+//   let number = 20
+//   function fn2() {
+//     let number = 30
+//     function fn3() {
+//       console.log(number)
+//     }
+//     fn3()
+//   }
+//   fn2()
+// }
+// fn1() // 控制台会输出30，这是由于JavaScript中变量的访问规则——优先访问离自己作用域最近的变量
