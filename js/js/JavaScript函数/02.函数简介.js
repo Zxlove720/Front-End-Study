@@ -34,3 +34,8 @@
 // console.log(getSum(1, 2)) // 控制台输出NaN
 // 因为函数需要三个参数，但是调用时只传递了两个参数，形参列表按照顺序接收参数，
 // 形参a和b接收到传递的参数1和2，但是没有参数给形参c获取，所以说c是undefined，这会导致a+b+c的结果是NaN。
+
+// function getSum(a = 0, b = 0, c = 0) {  // 给函数形参的默认值为0
+//   return a + b + c
+// }
+// console.log(getSum(1, 2)) // 此时控制台会输出3
