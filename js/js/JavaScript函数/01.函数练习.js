@@ -38,8 +38,8 @@
 function changeTime(time) {
   let array = []
   array[0] = parseInt(time / 3600)
-  array[1] = time % 3600 / 60
-  array[2] = time % 60
+  array[1] = parseInt(time % 3600 / 60)
+  array[2] = parseInt(time % 60)
   return array
 }
 let time = +prompt("请输入时间（s）")
