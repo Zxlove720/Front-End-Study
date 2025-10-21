@@ -35,5 +35,13 @@
 
 
 // 时间转换
+function changeTime(time) {
+  let array = []
+  array[0] = parseInt(time / 3600)
+  array[1] = time % 3600 / 60
+  array[2] = time % 60
+  return array
+}
 let time = +prompt("请输入时间（s）")
-
+let timeArray = changeTime(time)
+document.writeln(`${timeArray[0]}时${timeArray[1]}分${timeArray[2]}秒`)
