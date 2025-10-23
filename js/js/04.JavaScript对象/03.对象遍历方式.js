@@ -32,6 +32,7 @@ for (let k in obj) {
   // 由于获取的对象属性是string类型的，如果使用对象.属性就会出错
   // console.log(obj.k) 
   // 所以只能使用对象["属性"]进行遍历
+  console.log(obj.k)
   console.log(obj[k])
 }
 
