@@ -7,18 +7,22 @@ document.write(`
   <table>
     <caption>订单表</caption>
     <thead>
+      <tr>
       <th>商品名称</th>
       <th>商品单价</th>
       <th>购买数量</th>
       <th>商品总价</th>
       <th>收货地址</th>
+      </tr>
     </thead>
     <tbody>
+      <tr>
       <td>Iphone17</td>
       <td>${price}</td>
       <td>${count}</td>
       <td>${total}</td>
       <td>${address}</td>
+      </tr>
     </tbody>
   </table>
   `)

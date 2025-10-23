@@ -34,3 +34,40 @@ for (let k in obj) {
   // 所以只能使用对象["属性"]进行遍历
   console.log(obj[k])
 }
+
+
+let students = [
+  { name: "小明", age: 18, gender: "男", hometown: "重庆" },
+  { name: "小红", age: 18, gender: "女", hometown: "重庆" },
+  { name: "小花", age: 18, gender: "女", hometown: "重庆" },
+  { name: "小亮", age: 18, gender: "男", hometown: "重庆" }
+]
+
+document.write(`
+  <table>
+  <caption>学生信息表</caption>
+  <thead>
+  <tr>
+  <th>用户名</th>
+  <th>年龄</th>
+  <th>性别</th>
+  <th>籍贯</th>
+  </tr>
+  </thead>
+  <tbody>
+  `)
+
+for (let i in students) {
+  let student = students[i]
+  document.write(`<tr>`)
+  for (let j in student) {
+    document.write(`
+      <td>${student[j]}</td>
+      `)
+  }
+  document.write(`</tr>`)
+}
+document.write(`
+  </tbody>
+  </table>
+  `)
