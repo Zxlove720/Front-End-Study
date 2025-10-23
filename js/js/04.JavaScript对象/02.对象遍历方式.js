@@ -43,20 +43,6 @@ let students = [
   { name: "小亮", age: 18, gender: "男", hometown: "重庆" }
 ]
 
-document.write(`
-  <table>
-  <caption>学生信息表</caption>
-  <thead>
-  <tr>
-  <th>用户名</th>
-  <th>年龄</th>
-  <th>性别</th>
-  <th>籍贯</th>
-  </tr>
-  </thead>
-  <tbody>
-  `)
-
 for (let i in students) {
   let student = students[i]
   document.write(`<tr>`)
@@ -67,7 +53,4 @@ for (let i in students) {
   }
   document.write(`</tr>`)
 }
-document.write(`
-  </tbody>
-  </table>
-  `)
+
