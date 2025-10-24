@@ -18,3 +18,8 @@ let obj = {
   password: "654321"
 }
 console.log(obj.password) // 输出654321，后写的覆盖先写的
+
+console.log(typeof null)
+
+let user = null
+console.log(user) // 输出null
