@@ -10,4 +10,5 @@ for (let i = 0; i < array.length; i++) {
   let randomNumber = Math.floor(Math.random() * array.length)
   document.write(array[randomNumber])
   array.splice(randomNumber, 1)
+
 }
