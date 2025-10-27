@@ -1,5 +1,5 @@
 // ### 练习题1：
-// 写一个程序，要求如下（★★） 
+// 写一个程序，要求如下（★★）
 // * 需求1：让用户输入五个有效年龄（0-100之间），**放入数组中**
 //   * 必须输入五个有效年龄年龄，如果是无效年龄，则不能放入数组中
 // * 需求2：打印出所有成年人的年龄 (数组筛选)
@@ -36,8 +36,8 @@
 // let max = ages[0]
 // let min = ages[0]
 // for (let i = 1; i < ages.length; i++) {
-//   max = max > ages[i] ? max : ages[i] 
-//   min = min < ages[i] ? min : ages[i] 
+//   max = max > ages[i] ? max : ages[i]
+//   min = min < ages[i] ? min : ages[i]
 // }
 // document.write(`最大年龄是：${max}`)
 // document.write(`最小年龄是：${min}`)
@@ -49,22 +49,22 @@
 // * 例如: [88,20,10,100,50]  打印 2
 // * 例如: [88,20,30,100,50]  打印-1
 
-//  ### 练习题3: 
+//  ### 练习题3:
 
 // 使用for循环 - 求出数组元素的和 [5, 8, 9, 2, 1, 5]
 
 
-// ### 练习题4: 
+// ### 练习题4:
 
 // 使用for循环 - 求出数组里大于5的i和 [4, 9, 5, 20, 3, 11]
 
 
 
-// ### 练习题5: 
+// ### 练习题5:
 
 // 使用for循环 - 求出班级里同学们平均年龄[15, 19, 21, 33, 18, 24]
 
-// ### 练习题6: 
+// ### 练习题6:
 
 // 计算[2, 6, 18, 15, 40] 中能被3整除的偶数的和
 
@@ -75,10 +75,20 @@
 // ### 练习题8：
 
 // 给一个数字数组，该数组中有很多数字0，将不为0的数据存入到一个新的数组中
-let array = [0, 0, 0, 0, 0, 0, 1, 0, 3, 2, 0]
-let newArray = []
-for (let i = 0; i < array.length; i++) {
-  if (array[i] !== 0) {
-    newArray.push(array[i])
-  }
+// let array = [0, 0, 0, 0, 0, 0, 1, 0, 3, 2, 0]
+// let newArray = []
+// for (let i = 0; i < array.length; i++) {
+//   if (array[i] !== 0) {
+//     newArray.push(array[i])
+//   }
+// }
+
+
+let number = +prompt(`请输入1 - 20的整数`)
+for (let i = 0; i < number; i++) {
+  document.write(`
+    <li>
+      <img src="images/${i + 1}.webp">
+    </li>
+    `)
 }
