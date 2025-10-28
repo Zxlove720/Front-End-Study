@@ -23,6 +23,20 @@ console.log(count)
 // 2. 该对象的属性为性别,年龄,爱好(3个)
 // 3. 该对象的方法有 说话, 吃饭(2个)
 // 4. 在控制台分别调用该对象的属性和方法
+per = {
+  gender: 'male',
+  age: 18,
+  hobby: 'Java',
+  eat: function () {
+    console.log(`吃饭`)
+  },
+  speak: function () {
+    console.log(`说话`)
+  }
+}
+console.log(per.gender);
+console.log(per.eat());
+
 
 // ### 练习题3：
 
