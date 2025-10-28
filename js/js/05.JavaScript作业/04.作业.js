@@ -101,25 +101,33 @@ console.log(`数组的和是${average(array)}，数组的平均值是${average(a
 // let re1 = some('榴莲', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
 // console.log(re1) // false
 // ~~~
+// function inArray(element, array = []) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === element) {
+//       return true
+//     }
+//   }
+//   return false
+// }
+// let fruits = ['苹果', '香蕉', '橘子', '荔枝', '梨子']
+// console.log(inArray(`荔枝`, fruits))
+// console.log(inArray(`西瓜`, fruits))
+
+// ### 拓展题2
+// 需求：封装 findeIndex 函数返回查找元素在数组中的索引号。
+
+// 要传递2个参数 元素、数组
+// 如果找到，则返回查找元素在数组中的索引号，如果查找不到，则返回 -1
+// 例如检测香蕉  数组['苹果', '香蕉', '橘子', '荔枝', '梨子']中， 返回结果是  1
+// 格式如下：
 function inArray(element, array = []) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === element) {
-      return true
+      return i
     }
   }
-  return false
+  return -1
 }
 let fruits = ['苹果', '香蕉', '橘子', '荔枝', '梨子']
 console.log(inArray(`荔枝`, fruits))
 console.log(inArray(`西瓜`, fruits))
-
-// ### 拓展题2
-
-// 需求：  封装 findeIndex 函数返回查找元素在数组中的索引号。
-
-// - 要传递2个参数 元素、数组
-// - 如果找到，则返回查找元素在数组中的索引号，如果查找不到，则返回 -1
-
-// 例如检测 香蕉    数组['苹果', '香蕉', '橘子', '荔枝', '梨子']中， 返回结果是  1
-
-// 格式如下：
