@@ -23,6 +23,28 @@ console.log(count)
 // 2. 该对象的属性为性别,年龄,爱好(3个)
 // 3. 该对象的方法有 说话, 吃饭(2个)
 // 4. 在控制台分别调用该对象的属性和方法
+// per = {
+//   gender: 'male',
+//   age: 18,
+//   hobby: 'Java',
+//   eat: function () {
+//     console.log(`吃饭`)
+//   },
+//   speak: function () {
+//     console.log(`说话`)
+//   }
+// }
+// console.log(per.gender);
+// console.log(per.eat());
+
+
+// ### 练习题3：
+// 调用对象的方法
+// 目的: 复习对象的使用
+// 要求:
+// 1. 对象声明完毕后, 调用对象中的吃饭的方法
+// 2. 提示: 对象中的方法本质是函数, 调用需要加()
+// 3. 方法也可以传递参数的
 per = {
   gender: 'male',
   age: 18,
@@ -32,24 +54,12 @@ per = {
   },
   speak: function () {
     console.log(`说话`)
+  },
+  sum: function (a, b) {
+    return a + b
   }
 }
-console.log(per.gender);
-console.log(per.eat());
-
-
-// ### 练习题3：
-
-// 调用对象的方法
-
-// 目的: 复习对象的使用
-
-// 要求:
-
-// 1. 对象声明完毕后, 调用对象中的吃饭的方法
-// 2. 提示: 对象中的方法本质是函数, 调用需要加()
-// 3. 方法也可以传递参数的
-
+console.log(per.sum(1, 2));
 
 
 // ### 练习题4：
