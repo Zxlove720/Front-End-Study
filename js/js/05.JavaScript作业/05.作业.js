@@ -60,6 +60,7 @@ per = {
   }
 }
 console.log(per.sum(1, 2));
+console.log(per[`gender`]);
 
 
 // ### 练习题4：
