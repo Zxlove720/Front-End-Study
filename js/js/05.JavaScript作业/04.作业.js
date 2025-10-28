@@ -33,12 +33,17 @@ console.log(getSum(1, 2))
 // 3. 经过函数内部处理后,输出  `第一个值的结果是2  第二个值的结果是1`
 // 4. 可以多调用两次
 function changeNum(a, b) {
-  let c = b
-  b = a
-  a = c
-  return [a, b]
+  return [b, a]
 }
-console.log(changeNum(1, 2))
+let number1 = 5
+let number2 = 8
+console.log(number1 + " " + number2)
+let result = changeNum(number1, number2)
+number1 = result[0]
+number2 = result[1]
+console.log(number1 + " " + number2)
+
+
 
 // ### 练习题4：
 
