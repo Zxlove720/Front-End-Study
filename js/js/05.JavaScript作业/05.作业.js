@@ -62,7 +62,6 @@ per = {
 console.log(per.sum(1, 2));
 console.log(per[`gender`]);
 
-
 // ### 练习题4：
 
 // 猜数字游戏，设定次数，最多猜8次
