@@ -14,6 +14,7 @@ while (true) {
 }
 console.log(count)
 
+
 // ### 练习题2：
 // 声明对象
 // 目的: 复习对象的声明
