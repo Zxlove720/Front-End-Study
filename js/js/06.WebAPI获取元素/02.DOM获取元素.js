@@ -14,3 +14,9 @@ console.log(typeof liList)
 for (let i = 0; i < liList.length; i++) {
   console.log(liList[i])
 }
+// 根据id获取一个元素
+document.getElementById(`id`)
+// 根据标签获取一类元素
+document.getElementByTagName(`div`)
+// 根据类名获取元素
+document.getElementByClassName(`box`)
