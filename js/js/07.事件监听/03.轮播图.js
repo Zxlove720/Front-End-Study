@@ -32,6 +32,7 @@ next.addEventListener(`click`, function () {
   }
 })
 
+// 4.上一张图片
 const prev = document.querySelector(`.prev`)
 prev.addEventListener(`click`, function () {
   const data = sliderData[i]
@@ -45,4 +46,20 @@ prev.addEventListener(`click`, function () {
   if (i < 0) {
     i = 7
   }
+})
+
+// 5.设置自动播放
+const box = document.querySelector(`.slider`)
+let timer = setInterval(function () {
+  next.click()
+}, 2000)
+
+box.addEventListener(`mouseenter`, function () {
+  clearInterval(timer)
+})
+
+box.addEventListener(`mouseleave`, function () {
+  timer = setInterval(function () {
+    next.click()
+  }, 2000)
 })
