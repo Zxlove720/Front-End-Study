@@ -27,3 +27,6 @@ console.log(`星期${date1.getDay()}`)
 console.log(date1.getHours())
 console.log(date1.getMinutes())
 console.log(date1.getSeconds())
+
+document.write(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}
+ ${date.getHours()}:${date.getMinutes()}`)
