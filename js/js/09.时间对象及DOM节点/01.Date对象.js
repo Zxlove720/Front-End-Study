@@ -28,5 +28,19 @@ console.log(date1.getHours())
 console.log(date1.getMinutes())
 console.log(date1.getSeconds())
 
-document.write(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}
- ${date.getHours()}:${date.getMinutes()}`)
+const timer = setInterval(function () {
+  const date = new Date()
+  const year = date.getFullYear()
+  let month = date.getMonth()
+  month = month >= 9 ? month + 1 : '0' + (month + 1)
+  let day = date.getDate()
+  day = day >= 10 ? day : '0' + day
+  let hour = date.getHours()
+  hour = hour >= 10 ? hour : '0' + hour
+  let minute = date.getMinutes()
+  minute = minute >= 10 ? minute : '0' + minute
+  let second = date.getSeconds()
+  second = second >= 10 ? second : '0' + second
+  document.querySelector(`.box`).innerHTML = (`${year}-${month}-${day}
+ ${hour}:${minute}:${second}`)
+}, 1000)
