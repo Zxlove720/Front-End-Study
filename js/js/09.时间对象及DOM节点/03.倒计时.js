@@ -6,7 +6,7 @@ let timer = setInterval(function () {
   // 获取当前时间戳
   const now = Date.now()
   // 获取目标时间的时间戳
-  const end = +new Date(`2025-11-21T18:30:00`)
+  const end = +new Date(`2025-11-21T16:10:00`)
   // 获取二者差值
   const time = end - now
   console.log(time)
