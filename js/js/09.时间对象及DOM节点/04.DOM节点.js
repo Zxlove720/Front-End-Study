@@ -12,7 +12,6 @@
   console.log(father)
 })();
 
-
 (function () {
   const father = document.querySelector(`.father`)
   // 父节点获取所有子节点（包括属性和文本节点）
@@ -21,4 +20,14 @@
   // 父节点获取所有元素子节点，该方法使用较多
   const childList = father.children
   console.log(childList);
+})();
+
+(function () {
+  const son2 = document.querySelector(`.son2`)
+  // nextElementSibling 获取该元素的下一个兄弟元素节点
+  console.log(son2.nextElementSibling)
+  // nextSibling 获取该元素下一个元素节点，包括任何节点
+  console.log(son2.nextSibling)
+  // previousElementSibling 获取该元素的前一个兄弟元素节点
+  console.log(son2.previousElementSibling)
 })()
