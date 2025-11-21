@@ -28,7 +28,7 @@ console.log(date1.getHours())
 console.log(date1.getMinutes())
 console.log(date1.getSeconds())
 
-const timer = setInterval(function () {
+function getTime() {
   const date = new Date()
   const year = date.getFullYear()
   let month = date.getMonth()
@@ -41,6 +41,22 @@ const timer = setInterval(function () {
   minute = minute >= 10 ? minute : '0' + minute
   let second = date.getSeconds()
   second = second >= 10 ? second : '0' + second
-  document.querySelector(`.box`).innerHTML = (`${year}-${month}-${day}
+  box.innerHTML = (`${year}-${month}-${day}
  ${hour}:${minute}:${second}`)
+}
+
+const box = document.querySelector(`.box`)
+getTime()
+const timer = setInterval(function () {
+  getTime()
 }, 1000)
+
+// 几种简单的获取有格式时间的方法（格式是常规的）
+// 获取时间（日期 + 时间）
+console.log(date.toLocaleString())
+// 获取时间（只有日期）
+console.log(date.toLocaleDateString())
+// 获取时间（只有时间）
+console.log(date.toLocaleTimeString());
+
+
