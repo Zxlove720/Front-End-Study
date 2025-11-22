@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07.swiper使用</title>
+  <link rel="stylesheet" href="css/swiper.css">
+  <style>
+    .box {
+      width: 1400px;
+      height: 800px;
+      background-color: pink;
+      margin: 10px auto;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-wrapper {
+      transition-delay: .3s;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin: 20px auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide:nth-child(2) {
+      background: pink;
+      color: #fff;
+    }
+
+    .swiper-slide p {
+      transform: translateX(-200px);
+      opacity: 0;
+      transition: all .4s;
+    }
+
+    .ani-slide p {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="swiper-container swiper-container-initialized swiper-container-vertical">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ani-slide swiper-slide-active" style="height: 300px;">
+          <p>Slide 1</p>
+        </div>
+        <div class="swiper-slide swiper-slide-next" style="height: 300px;">
+          <p>Slide 2</p>
+        </div>
+        <div class="swiper-slide" style="height: 300px;">
+          <p>Slide 3</p>
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-bullets"><span
+          class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+          class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+  </div>
+  <script src="../js/09.时间对象及DOM节点/swiper.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      followFinger: false,
+      speed: 800,
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      on: {
+        init: function (swiper) {
+          slide = this.slides.eq(0);
+          slide.addClass('ani-slide');
+        },
+        transitionStart: function () {
+          for (i = 0; i < this.slides.length; i++) {
+            slide = this.slides.eq(i);
+            slide.removeClass('ani-slide');
+          }
+        },
+        transitionEnd: function () {
+          slide = this.slides.eq(this.activeIndex);
+          slide.addClass('ani-slide');
+
+        },
+      }
+    });
+  </script>
+</body>
+
+</html>
