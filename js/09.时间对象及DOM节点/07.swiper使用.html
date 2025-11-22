@@ -101,6 +101,12 @@
       pagination: {
         el: '.swiper-pagination',
       },
+      autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+        disableOnInteraction: false,
+      },
       on: {
         init: function (swiper) {
           slide = this.slides.eq(0);
