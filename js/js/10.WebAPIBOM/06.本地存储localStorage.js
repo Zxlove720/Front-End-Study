@@ -41,3 +41,8 @@ console.log(JSON.parse(localStorage.getItem(`user`)))
 
 // sessionStorage
 // 生命周期是浏览器的生命周期，浏览器关闭则丢失
+sessionStorage.setItem(`user`, `wzb`)
+console.log(sessionStorage.getItem(`user`))
+sessionStorage.setItem(`user`, JSON.stringify(user))
+console.log(JSON.parse(sessionStorage.getItem(`user`)))
+
