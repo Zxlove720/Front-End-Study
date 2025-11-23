@@ -1,12 +1,20 @@
 // 1.获取填写的表单数据并加入数组存储
 // 1.0从localStorage中获取studentList，如果没有则使用一个空数组
-const studentList = JSON.parse(localStorage.getItem(`studentList`)) || []
+function getFromLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key)) || []
+}
+
+function saveToLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value))
+}
+
 render()
 // 1.1获取表单
 const info = document.querySelector(`.info`)
 info.addEventListener(`submit`, function (e) {
   // 1.2取消表单提交默认行为
   e.preventDefault()
+  const studentList = getFromLocalStorage(`studentList`)
   // 1.3判断用户数据是否为空
   const dataList = document.querySelectorAll(`form [name]`)
   for (let i = 0; i < dataList.length; i++) {
@@ -27,7 +35,7 @@ info.addEventListener(`submit`, function (e) {
   // 1.5清空表单数据
   this.reset()
   // 1.6将数组数据存储到localStorage
-  localStorage.setItem(`studentList`, JSON.stringify(studentList))
+  saveToLocalStorage(`studentList`, studentList)
   // 1.7进行渲染
   render()
 })
@@ -35,7 +43,7 @@ info.addEventListener(`submit`, function (e) {
 // 2.渲染，从localStorage中取出studentList反序列化为数组使用，完成渲染
 function render() {
   // 2.1使用map()方法将数组中的数据渲染成需要的格式
-  const studentList = JSON.parse(localStorage.getItem(`studentList`)) || []
+  const studentList = getFromLocalStorage(`studentList`)
   const list = studentList.map(function (element, index) {
     return `
       <tr>
@@ -65,10 +73,10 @@ function render() {
   tbody.addEventListener(`click`, function (e) {
     if (e.target.tagName === `A`) {
       // 3.2执行删除逻辑
-      const studentList = JSON.parse(localStorage.getItem(`studentList`))
+      const studentList = getFromLocalStorage(`studentList`)
       studentList.splice(+e.target.dataset.id, 1)
       // 3.3删除后写回localStorage
-      localStorage.setItem(`studentList`, JSON.stringify(studentList))
+      saveToLocalStorage(`studentList`, studentList)
       // 3.4重新渲染
       render()
     }
