@@ -79,6 +79,7 @@ function verifyCode() {
 // 验证密码
 const password = document.querySelector(`.xtx-form [name=password]`)
 password.addEventListener(`change`, verifyPassword)
+password.addEventListener(`change`, verifyConfirm)
 function verifyPassword() {
   // 编写正则表达式
   const regex = /^[a-zA-Z0-9-_]{6,20}$/
@@ -94,4 +95,52 @@ function verifyPassword() {
   return true
 }
 
+// 确认密码
+const confirm = document.querySelector(`.xtx-form [name=confirm]`)
+confirm.addEventListener(`change`, verifyConfirm)
+function verifyConfirm() {
+  const message = confirm.nextElementSibling
+  // 判断两次输入密码是否相同
+  if (!(confirm.value === password.value)) {
+    // 两次输入密码不同
+    message.innerText = `两次输入密码不同`
+    return false
+  }
+  // 两次输入密码相同
+  message.innerText = ``
+  return true
+}
+
+// 同意协议
+const queren = document.querySelector(`.xtx-form-item .icon-queren`)
+queren.addEventListener(`click`, function () {
+  queren.classList.toggle(`icon-queren2`)
+})
+
+// 注册按钮
+const submit = document.querySelector(`.xtx-form-item .submit`)
+submit.addEventListener(`click`, function (e) {
+  // 检查表单各项数据是否已经填写完毕
+  if (!verifyUsername()) {
+    e.preventDefault()
+  }
+  if (!verifyPhone()) {
+    e.preventDefault()
+  }
+  if (!verifyCode()) {
+    e.preventDefault()
+  }
+  if (!verifyPassword()) {
+    e.preventDefault()
+  }
+  if (!verifyConfirm()) {
+    e.preventDefault()
+  }
+  // 验证用户协议是否已经同意
+  if (!queren.classList.contains(`icon-queren2`)) {
+    // 用户未同意协议
+    e.preventDefault()
+    return alert(`请先阅读并同意用户协议`)
+  }
+})
 
