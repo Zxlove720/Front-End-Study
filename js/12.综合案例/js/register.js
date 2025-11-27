@@ -49,11 +49,29 @@ function verifyPhone() {
   const message = phone.nextElementSibling
   // 根据正则表达式进行判断用户名是否合法
   if (!regex.test(phone.value)) {
-    // 用户名不合法
-    message.innerText = `手机号不合法`
+    // 手机号不合法
+    message.innerText = `手机号格式不合法`
     return false
   }
-  // 用户名合法
+  // 手机号合法
+  message.innerText = ``
+  return true
+}
+
+// 验证验证码
+const code = document.querySelector(`.xtx-form [name=code]`)
+code.addEventListener(`change`, verifyCode)
+function verifyCode() {
+  // 编写正则表达式
+  const regex = /^\d{6}$/
+  const message = code.nextElementSibling
+  // 根据正则表达式进行判断用户名是否合法
+  if (!regex.test(code.value)) {
+    // 验证码不合法
+    message.innerText = `验证码格式不合法`
+    return false
+  }
+  // 验证码合法
   message.innerText = ``
   return true
 }
