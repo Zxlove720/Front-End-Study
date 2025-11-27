@@ -76,4 +76,22 @@ function verifyCode() {
   return true
 }
 
+// 验证密码
+const password = document.querySelector(`.xtx-form [name=password]`)
+password.addEventListener(`change`, verifyPassword)
+function verifyPassword() {
+  // 编写正则表达式
+  const regex = /^[a-zA-Z0-9-_]{6,20}$/
+  const message = password.nextElementSibling
+  // 根据正则表达式进行判断用户名是否合法
+  if (!regex.test(password.value)) {
+    // 密码不合法
+    message.innerText = `密码格式不合法`
+    return false
+  }
+  // 密码合法
+  message.innerText = ``
+  return true
+}
+
 
