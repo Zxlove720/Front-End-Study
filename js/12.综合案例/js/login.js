@@ -17,4 +17,20 @@ tab.addEventListener(`click`, function (e) {
   }
 })
 
+// 登录前判断用户是否同意协议
+const check = document.querySelector(`.agree [name=agree]`)
+const login = document.querySelector(`.button .dl`)
+login.addEventListener(`click`, function (e) {
+  e.preventDefault();
+
+  // 判断用户是否同意协议
+  if (!check.checked) {
+    // 用户不同意协议，提示并阻止默认行为
+    return alert(`请先阅读同意协议`)
+  }
+  // 用户已经阅读同意协议，将用户名保存到localStorage中并跳转首页
+  const username = document.querySelector(`[name=username]`)
+  localStorage.setItem(`username`, username.value)
+  location.href = `../index.html`
+})
 
