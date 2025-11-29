@@ -31,6 +31,7 @@ login.addEventListener(`click`, function (e) {
   // 用户已经阅读同意协议，将用户名保存到localStorage中并跳转首页
   const username = document.querySelector(`[name=username]`)
   localStorage.setItem(`username`, username.value)
-  location.href = `../index.html`
+  // location.href = `/js/12.综合案例/index.html`
+  location.href = `index.html`
 })
 
