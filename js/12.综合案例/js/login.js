@@ -19,8 +19,8 @@ tab.addEventListener(`click`, function (e) {
 
 // 登录前判断用户是否同意协议
 const check = document.querySelector(`.agree [name=agree]`)
-const login = document.querySelector(`.button .dl`)
-login.addEventListener(`click`, function (e) {
+const login = document.querySelector(`form`)
+login.addEventListener(`submit`, function (e) {
   e.preventDefault()
   // 判断用户是否同意协议
   if (!check.checked) {
