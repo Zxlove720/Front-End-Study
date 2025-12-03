@@ -10,7 +10,8 @@ console.log(five);
 // 使用数组解构交换两个数的值
 let a = 99
 let b = 66
-console.log(a, b)
-  ;[b, a] = [a, b]
+console.log(a, b);
+// 如果是[a, b]数组作为一行代码的开头，这一行的前面必须使用;不然就会把[a, b]数组当成是上一行没写完的
+[b, a] = [a, b]
 console.log(b, a)
 
