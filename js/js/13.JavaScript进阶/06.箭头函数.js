@@ -1,6 +1,6 @@
-const fn = function () {
-  console.log(`这是一个普通函数`)
-}
+// const fn = function () {
+//   console.log(`这是一个普通函数`)
+// }
 
 // 先改为箭头函数写法
 // const fn2 = () => {
@@ -14,16 +14,24 @@ const fn = function () {
 // const fn2 = number => console.log(number)
 
 // 如果函数体只有一行，并且需要返回值，那么可以省略return
-const fn2 = x => x + 1 // 返回x + 1
-console.log(fn2(1)) // 输出2
+// const fn2 = x => x + 1 // 返回x + 1
+// console.log(fn2(1)) // 输出2
 
 // 特别注意，如果箭头函数需要返回对象字面量，并且省略了大括号，则必须使用()包裹对象字面量
 // 因为函数体本来是有大括号的，对象也是大括号，容易分不清楚
-const fn3 = x => ({ username: `jack`, age: 18 })
-console.log(fn3())
+// const fn3 = x => ({ username: `jack`, age: 18 })
+// console.log(fn3())
 
 // 箭头函数属于表达式函数，所以说没有函数提升
 // fn4()
 // const fn4 = x => console.log(x)
 
+// 箭头函数的目的就是为了让函数表达式更加简洁，适用于那些本来需要匿名函数的地方
+// 箭头函数是没有this的
 
+// 箭头函数没有arguments
+// const fn = x => console.log(arguments) // 箭头函数中没有arguments，所以说报错arguments is not defined
+// fn()
+// 箭头函数只有剩余参数 使用剩余参数不能省略()
+const fn = (...x) => console.log(x)
+fn(1, 2, 3, 4, 5)
