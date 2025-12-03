@@ -22,3 +22,8 @@ console.log(fn2(1)) // 输出2
 const fn3 = x => ({ username: `jack`, age: 18 })
 console.log(fn3())
 
+// 箭头函数属于表达式函数，所以说没有函数提升
+// fn4()
+// const fn4 = x => console.log(x)
+
+
