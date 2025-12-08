@@ -10,7 +10,21 @@
 </head>
 
 <body>
-
+  <div id="root">
+    <!-- {{}}是VUE的一种特殊语法，插值表达式 -->
+    <h1>Hello {{message2}}</h1>
+  </div>
+  <script>
+    new Vue({
+      // el: Element的缩写，用于指定VUE和哪个容器绑定，通常为CSS选择器字符串；也可以通过document.query查找元素
+      el: `#root`,
+      // data用于存储数据，提供给el所绑定的容器使用，由于有很多数据，暂时先写成对象
+      data: {
+        message1: `VUE`,
+        message2: `world`
+      }
+    })
+  </script>
 </body>
 
 </html>
