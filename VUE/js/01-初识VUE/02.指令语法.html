@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02.指令语法</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <!-- 1.插值语法：{{}}一般是用于标签体内容，可以直接读取data中的内容 -->
+    <h1>Hello {{constant.word}}</h1>
+    <!-- 2.指令语法：v-，主要是用于解析标签（标签属性、标签体内容，绑定事件），有很多指令 -->
+    <a v-bind:href="web.link" target="_blank">去百度</a>
+  </div>
+  <script>
+    new Vue({
+      el: `#container`,
+      data: {
+        constant: {
+          word: `World`
+        },
+        web: {
+          link: `https://www.baidu.com`
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
