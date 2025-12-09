@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04.el和data的不同写法</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Hello {{message}}</h1>
+  </div>
+  <script>
+    // 在实例化Vue对象时，需要el和data两个属性
+    // new Vue({
+    //   el: `.container`,
+    //   data: {
+    //     message: `world`
+    //   }
+    // })
+
+    // // el有另外一种写法
+    // const v = new Vue({
+    //   data: {
+    //     message: `world`
+    //   }
+    // })
+    // console.log(v);
+    // // 通过Vue对象.$mount的方式绑定容器
+    // v.$mount(`.container`)
+
+    // data有另外一种写法
+    // 写成一个函数并返回一个对象，对象中存放需要使用的数据
+    // 因为这个函数的调用者是Vue，所以说this指向Vue。不能使用箭头函数，箭头函数没有this，会指向window，出问题
+    const v = new Vue({
+      // 在对象中的方法可以写成如下所示
+      // 等价于
+      // data: function() {console.log(this)}
+      // 相当于省略了: function
+      data() {
+        console.log(this);
+        return {
+          message: `世界`
+        }
+      }
+    })
+    v.$mount(`.container`)
+  </script>
+</body>
+
+</html>
