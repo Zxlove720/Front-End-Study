@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03.数据绑定</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- v-bind是Vue对容器的单向绑定，Vue数据改变可以影响容器内容，而容器内容改变不影响Vue数据 -->
+    <input type="text" v-bind:value="value">
+    <br>
+    <!-- v-model是Vue和容器的双向绑定，Vue数据改变和容器数据改变相互影响 -->
+    <!-- <input type="text" v-model:value="value"> -->
+    <input type="text" v-model="value">
+  </div>
+  <script>
+    const v = new Vue({
+      el: `.container`,
+      data: {
+        value: `这是输入内容`
+      }
+    })
+  </script>
+</body>
+
+</html>
