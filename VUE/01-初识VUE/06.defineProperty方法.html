@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06.defineProperty方法</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1></h1>
+  </div>
+  <script>
+    let number = 18
+    const user = {
+      username: '张三',
+      gender: 'male',
+    }
+    // Object.defineProperty()方法可以给一个对象添加属性，并且给这个属性进行高级设置
+    // Object.defineProperty(要添加属性的对象，属性名，属性设置)
+    Object.defineProperty(user, 'age', {
+      // value可以设置属性值，但是只设置value，属性可以使用，但是不参与遍历
+      // value: 18,
+      // enumerable: true,  // 控制属性是否可以枚举（可以遍历），默认为false
+      // writable: true,    // 控制属性是否可以修改，默认为false
+      // configurable: true,// 控制属性是否可以删除，默认为false
+
+      // 以上是数据描述符
+      // ========================================================================
+      // 以下是访问器描述符
+      // 数据描述符和访问器描述符不能同时使用
+
+
+      // 通过访问器描述符添加的属性，不是静态添加的，而是通过函数动态获取的
+      // 当读取设置属性的值，调用函数返回值
+      get: function () {
+        console.log(`我被读取了`)
+        return number
+      },
+      // 当修改设置属性的值，调用函数，返回修改后的值
+      set: function (value) {
+        console.log(`我被修改了`)
+        number = value
+      }
+    })
+    console.log(user)
+    // defineProperty添加的属性，默认不参与遍历
+    console.log(Object.keys(user))
+    console.log(user.age)
+
+  </script>
+</body>
+
+</html>
