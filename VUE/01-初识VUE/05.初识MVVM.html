@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05.初识MVVM</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <!-- 这是MVVM中的View，用于展示数据 -->
+  <div class="container">
+    <h1>Hello {{message}}</h1>
+  </div>
+  <script>
+    // vm是MVVM模型中的ViewModel，用于将数据映射到View上（容器）；监听View中的用户操作，更新model中的数据
+    // vm是MVVM，也是VUE中的核心
+    const vm = new Vue({
+      el: ".container",
+      // 这是属于MVVM模型中的Model，用于保存数据
+      data: {
+        message: `world`
+      }
+    })
+  </script>
+</body>
+
+</html>
