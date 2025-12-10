@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01.Axios快速入门</title>
+</head>
+
+<body>
+  <ul>
+
+  </ul>
+  <!-- 引入Axios库 -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 使用axios全局函数
+    // let response
+    // axios({
+    //   method: "post",
+    //   url: "http://localhost:8080/schools/page",
+    //   data: {
+    //     "province": null,
+    //     "rankList": null
+    //   }
+    // }).then(result => {
+    //   // console.log(result)
+    //   // const { data } = result
+    //   // console.log(data)
+    //   // const { responseData } = data
+    //   // console.log(responseData)
+    //   // const { records } = responseData
+    //   // console.log(records)
+    //   // const [a, b, c] = records
+    //   // console.log(a)
+    //   // console.log(b)
+    //   // console.log(c)
+    //   const { data: { responseData: { records } } } = result
+    //   console.log(records)
+    //   let inner = ''
+    //   const container = document.querySelector('ul')
+    //   for (let i = 0; i < records.length; i++) {
+    //     inner += `<li>${records[i].schoolName}</li>`
+    //   }
+    //   console.log(inner)
+    //   container.innerHTML = inner
+    // })
+
+    axios({
+      // 填写url
+      url: "http://hmajax.itheima.net/api/city",
+      // 填写请求参数
+      params: {
+        pname: "广东省"
+      }
+    }).then(result => {
+      console.log(result)
+
+    })
+
+  </script>
+</body>
+
+</html>
